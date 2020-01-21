@@ -1,0 +1,9 @@
+[submodule "codebase/eoos/api"]
+	path = codebase/eoos/api
+	url = git@github.com:baigudin/eoos-api.git
+[submodule "codebase/eoos/system"]
+	path = codebase/eoos/system
+	url = git@github.com:baigudin/eoos-system-if-posix.git
+[submodule "codebase/eoos/library"]
+	path = codebase/eoos/library
+	url = git@github.com:baigudin/eoos-library.git
