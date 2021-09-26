@@ -1,19 +1,18 @@
-# EOOS ARM ARM926PXP Versatile/AB Board.
+# EOOS POSIX.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2019, Sergey Baigudin, Baigudin Software
-# @license   http://embedded.team/license/
+# @copyright 2019-2021, Sergey Baigudin, Baigudin Software
 
 cmake_minimum_required(VERSION 3.15)
 project(eoos-if-posix VERSION 1.0.0 LANGUAGES CXX)
+
+include(cmake/eoos.cmake)
+message(STATUS "EOOS option EOOS_ENABLE_TESTS=" ${EOOS_ENABLE_TESTS})
+enable_testing()
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-if(NOT DEFINED CMAKE_INSTALL_BINDIR)
-  message(STATUS "PROJECT MESSAGE: CMAKE_INSTALL_BINDIR IS NOT DEFINED AND SET TO BIN")
-  set(CMAKE_INSTALL_BINDIR "bin" CACHE PATH "User executables go to the bin directory")
-endif()
-
+add_subdirectory(extern)
 add_subdirectory(codebase)

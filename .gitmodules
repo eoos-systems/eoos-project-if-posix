@@ -1,0 +1,15 @@
+[submodule "codebase/interface"]
+	path = codebase/interface
+	url = git@github.com:baigudin/eoos-api.git
+[submodule "codebase/library"]
+	path = codebase/library
+	url = git@github.com:baigudin/eoos-library.git
+[submodule "codebase/system"]
+	path = codebase/system
+	url = git@github.com:baigudin/eoos-system-if-posix.git
+[submodule "extern/googletest"]
+	path = extern/googletest
+	url = git@github.com:google/googletest.git
+[submodule "codebase/tests"]
+	path = codebase/tests
+	url = git@github.com:baigudin/eoos-tests.git

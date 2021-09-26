@@ -1,0 +1,12 @@
+# EOOS RT.
+#
+# This file exports the eoos::eoos CMake target which should be passed to the target_link_libraries command.
+#
+# @author    Sergey Baigudin, sergey@baigudin.software
+# @copyright 2020, Sergey Baigudin, Baigudin Software
+
+
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+include("${CMAKE_CURRENT_LIST_DIR}/EoosTargets.cmake")
