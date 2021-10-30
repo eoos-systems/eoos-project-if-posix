@@ -7,16 +7,16 @@
 #
 # Example 1: outMessage "Hello, World!
 # Example 2: outMessage "Hello, World!" "OK"
-# Example 3: outMessage "Hello, World!" "RED" -blocked
+# Example 3: outMessage "Hello, World!" "RED" -block
 #
 # @param string $1 - an output string
 # @param enum sting $2 - a color of the string: BLACK, RED, GREEN, ORANGE, BLUE, CYAN, GREY, YELLOW, WHITE,
 #                        or common information: OK, ERROR, INF
-# @param enum string $3 - a key word about the message style: "-blocked"
+# @param enum string $3 - a key word about the message style: "-block"
 #
 outMessage()
 {
-    if [ "$2" == "-blocked" -o "$3" == "-blocked" ]; then
+    if [ "$2" == "-block" -o "$3" == "-block" ]; then
         BLOCKED="true"
     else
         BLOCKED="false"
