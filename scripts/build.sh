@@ -33,7 +33,7 @@ cd build
 outMessage "Generate CMake project" "INF"
 cmake .. -DCMAKE_INSTALL_PREFIX=CMakeInstallDir
 
-if [ "$2" == "--build" ]; then
+if [ "$1" == "--build" -o "$2" == "--build" ]; then
     outMessage "CALLING MAKE..." "INF" -blocked
     make all
         # DESTDIR=./CMakeInstallDir
