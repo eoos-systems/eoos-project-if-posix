@@ -1,8 +1,10 @@
 #!/bin/sh
 # This script builds a program.
 #
-# @param $1    --clean   - rebuilds the project by removing the 'build' directory.
-# @param $2    --build   - compile the project by calling 'make'.
+# @param $1         --clean   - Rebuilds the project by removing the 'build' directory.
+# @param $1,$2      --build   - Compiles the project by calling 'make'.
+# @param $1,$2,$3   --build   - Runs the project unit tests.
+# 
 #
 # SDIR: REPOSITORY/scripts$
 # EDIR: REPOSITORY/scripts$
