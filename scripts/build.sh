@@ -3,7 +3,7 @@
 #
 # @param $1         --clean   - Rebuilds the project by removing the 'build' directory.
 # @param $1,$2      --build   - Compiles the project by calling 'make'.
-# @param $1,$2,$3   --build   - Runs the project unit tests.
+# @param $1,$2,$3   --кгт     - Runs the project unit tests.
 # 
 #
 # SDIR: REPOSITORY/scripts$
@@ -33,7 +33,7 @@ cd build
 
 # CDIR: REPOSITORY/build$
 outMessage "Generate CMake project" "INF"
-cmake .. -DCMAKE_INSTALL_PREFIX=CMakeInstallDir
+cmake .. -DCMAKE_INSTALL_PREFIX=CMakeInstallDir -DCMAKE_BUILD_TYPE=Debug
 
 if [ "$1" == "--build" -o "$2" == "--build" ]; then
     outMessage "CALLING MAKE..." "INF" -blocked
