@@ -3,7 +3,7 @@
 #
 # @param $1         --clean   - Rebuilds the project by removing the 'build' directory.
 # @param $1,$2      --build   - Compiles the project by calling 'make'.
-# @param $1,$2,$3   --кгт     - Runs the project unit tests.
+# @param $1,$2,$3   --run     - Runs the project unit tests.
 # 
 #
 # SDIR: REPOSITORY/scripts$
@@ -46,6 +46,13 @@ fi
 
 if [ "$1" == "--run" -o "$2" == "--run" -o "$3" == "--run" ]; then
     outMessage "Run unit tests" "INF"
+    # @note Remove --gtest_filter key if it set
+    # --gtest_filter=MainTest*
+    # --gtest_filter=StringTest*
+    # --gtest_filter=ThreadTest*
+    # --gtest_filter=DebugTest*
+    #
+    # --gtest_shuffle    
     ./codebase/tests/EoosTests
 fi
 
