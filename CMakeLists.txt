@@ -1,7 +1,7 @@
 # EOOS POSIX.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2019-2021, Sergey Baigudin, Baigudin Software
+# @copyright 2019-2022, Sergey Baigudin, Baigudin Software
 
 cmake_minimum_required(VERSION 3.15)
 project(eoos-if-posix VERSION 1.0.0 LANGUAGES CXX)
@@ -10,11 +10,10 @@ include(cmake/eoos.cmake)
 message(STATUS "EOOS option EOOS_ENABLE_TESTS=" ${EOOS_ENABLE_TESTS})
 enable_testing()
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 add_compile_options(-Wall)
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g" CACHE STRING "" FORCE)
 
 add_subdirectory(extern)
 add_subdirectory(codebase)
