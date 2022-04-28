@@ -1,22 +1,25 @@
 #!/bin/sh
 # This script builds a program.
 #
-# @param $1         --clean   - Rebuilds the project by removing the 'build' directory.
-# @param $1,$2      --build   - Compiles the project by calling 'make'.
-# @param $1,$2,$3   --run     - Runs the project unit tests.
-# 
+# Case 1:
+# @param $1         --clean - Rebuilds the project by removing the 'build' directory.
+# @param $1,$2      --build - Compiles the project by calling 'make'.
+# @param $1,$2,$3   --run   - Runs the project unit tests.
+#
+# Case 2:
+# @param $1         --sca   - Runs the SCA report creation.
+# @param $2                 - IP address of SCA server.
 #
 # SDIR: REPOSITORY/scripts$
 # EDIR: REPOSITORY/scripts$
 source ./functions.sh
 
+# CDIR: REPOSITORY/scripts$
 outMessage "BUILDING OF PROJECT HAS BEEN INVOKED" "OK" -block
 
-# CDIR: REPOSITORY/scripts$
-outMessage "Build is started" "INF" -block
 cd ..
-
 # CDIR: REPOSITORY$
+
 if [ "$1" == "--clean" ]; then
     outMessage "Clean flag is set" "INF"
     if [ -d "build" ]; then
@@ -28,15 +31,16 @@ if [ ! -d "build" ]; then
     outMessage "Create built directory" "INF"
     mkdir build
 	mkdir build/CMakeInstallDir
+    mkdir build/sca
 fi
-cd build
 
+cd build
 # CDIR: REPOSITORY/build$
-outMessage "Generate CMake project" "INF"
-cmake .. -DCMAKE_INSTALL_PREFIX=CMakeInstallDir -DCMAKE_BUILD_TYPE=Debug
 
 if [ "$1" == "--build" -o "$2" == "--build" ]; then
-    outMessage "CALLING MAKE..." "INF" -blocked
+    outMessage "Generate CMake project" "INF"
+    cmake .. -DCMAKE_INSTALL_PREFIX=CMakeInstallDir -DCMAKE_BUILD_TYPE=Debug
+    outMessage "Call Make" "INF" -blocked
     make all
         # DESTDIR=./CMakeInstallDir
         # VERBOSE=1
@@ -53,9 +57,15 @@ if [ "$1" == "--run" -o "$2" == "--run" -o "$3" == "--run" ]; then
     # --gtest_filter=DebugTest*
     #
     # --gtest_shuffle    
-    ./codebase/tests/EoosTests
+    ./codebase/tests/EoosTests --gtest_shuffle
+fi
+
+cd ../scripts/
+# CDIR: REPOSITORY/scripts$
+
+if [ "$1" == "--sca" ]; then
+    outMessage "Create SCA report" "INF"
+    alauncher 7931616 -b -s "$2" --import ./../quality/sca/projects/absint/eoos-if-posix.dax --drop
 fi
 
 outMessage "BUILDING OF PROJECT HAS BEEN COMPLETED" "OK" -block
-cd ../scripts/
-# CDIR: REPOSITORY/scripts$

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dax mode="rulechecker" comment-mode="AAL" version="1.11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.absint.com/dtd/a3-dax-20.10i.xsd" xmlns="http://www.absint.com/dax" build="7931616" release="20.10i">
+    <name>SCA</name>
+    <description>Static Code Analazer (SCA) check</description>
+    <abi>
+        <alignof_attributed_pointer_1>4</alignof_attributed_pointer_1>
+        <alignof_attributed_pointer_2>4</alignof_attributed_pointer_2>
+        <alignof_attributed_pointer_3>4</alignof_attributed_pointer_3>
+        <alignof_bool>1</alignof_bool>
+        <alignof_char_array>1</alignof_char_array>
+        <alignof_double>8</alignof_double>
+        <alignof_float>4</alignof_float>
+        <alignof_function_pointer>4</alignof_function_pointer>
+        <alignof_int>4</alignof_int>
+        <alignof_long>4</alignof_long>
+        <alignof_long_double>8</alignof_long_double>
+        <alignof_long_long>8</alignof_long_long>
+        <alignof_pointer>4</alignof_pointer>
+        <alignof_short>2</alignof_short>
+        <atomic_attributed_pointer_1>no</atomic_attributed_pointer_1>
+        <atomic_attributed_pointer_2>no</atomic_attributed_pointer_2>
+        <atomic_attributed_pointer_3>no</atomic_attributed_pointer_3>
+        <atomic_bool>no</atomic_bool>
+        <atomic_char>no</atomic_char>
+        <atomic_double>no</atomic_double>
+        <atomic_float>no</atomic_float>
+        <atomic_function_pointer>no</atomic_function_pointer>
+        <atomic_int>no</atomic_int>
+        <atomic_long>no</atomic_long>
+        <atomic_long_double>no</atomic_long_double>
+        <atomic_long_long>no</atomic_long_long>
+        <atomic_pointer>no</atomic_pointer>
+        <atomic_short>no</atomic_short>
+        <bitfield_sign>signed</bitfield_sign>
+        <bits_of_byte>8</bits_of_byte>
+        <bits_of_char>8</bits_of_char>
+        <char16_t>unsigned short</char16_t>
+        <char32_t>unsigned int</char32_t>
+        <char_sign>unsigned</char_sign>
+        <endianness>big</endianness>
+        <enum_preferred_sign>signed</enum_preferred_sign>
+        <enum_preferred_size>int</enum_preferred_size>
+        <intmax_t>long long int</intmax_t>
+        <intptr_t>long int</intptr_t>
+        <max_atomic_width>0</max_atomic_width>
+        <pointer_attributes_1 />
+        <pointer_attributes_2 />
+        <pointer_attributes_3 />
+        <ptrdiff_t>long int</ptrdiff_t>
+        <rounding_mode>all</rounding_mode>
+        <sig_atomic_t>int</sig_atomic_t>
+        <size_t>long unsigned int</size_t>
+        <sizeof_attributed_pointer_1>4</sizeof_attributed_pointer_1>
+        <sizeof_attributed_pointer_2>4</sizeof_attributed_pointer_2>
+        <sizeof_attributed_pointer_3>4</sizeof_attributed_pointer_3>
+        <sizeof_bool>1</sizeof_bool>
+        <sizeof_double>8</sizeof_double>
+        <sizeof_float>4</sizeof_float>
+        <sizeof_function_pointer>4</sizeof_function_pointer>
+        <sizeof_int>4</sizeof_int>
+        <sizeof_long>4</sizeof_long>
+        <sizeof_long_double>8</sizeof_long_double>
+        <sizeof_long_long>8</sizeof_long_long>
+        <sizeof_pointer>4</sizeof_pointer>
+        <sizeof_short>2</sizeof_short>
+        <unaligned_dereference>error</unaligned_dereference>
+        <wchar_t>int</wchar_t>
+        <wint_t>int</wint_t>
+    </abi>
+    <options>
+        <c-version>C90</c-version>
+        <cxx-version>C++98</cxx-version>
+    </options>
+    <rulechecks name="Configuration">
+        <rules>
+            <A.>no</A.>
+            <AUTOSAR.>no</AUTOSAR.>
+            <M.>no</M.>
+            <M2008.>yes</M2008.>
+        </rules>
+        <checks />
+        <paths>
+            <path action="add" kind="folder">../../../../codebase</path>
+        </paths>        
+    </rulechecks>
+    <preprocess>
+        <keep-comments>no</keep-comments>
+        <clibrary>no</clibrary>
+        <remove-analysis-files>no</remove-analysis-files>
+        <use-internal-preprocessor>yes</use-internal-preprocessor>
+        <base>../../../../codebase</base>
+        <config name="ALL_LIB">
+            <language>C++</language>
+            <files>
+                <file>interface/source/Allocator.cpp</file>                
+                <file>system/source/sys.Call.cpp</file>
+                <file>system/source/sys.Main.cpp</file>
+                <file>system/source/sys.Scheduler.cpp</file>
+                <file>system/source/sys.System.cpp</file>                
+            </files>
+            <automatic-includes>
+                <automatic-include>interface/include/private/api.Cpu.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.CpuInterrupt.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.CpuPll.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.CpuRegisters.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.CpuTimer.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.SysInterrupt.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.SysMutex.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.SysResource.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.SysSemaphore.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.SysSynchronizable.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.SysThread.hpp</automatic-include>
+                <automatic-include>interface/include/private/api.SysTimer.hpp</automatic-include>
+                <automatic-include>interface/include/public/Allocator.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Collection.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Heap.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.IllegalValue.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Iterable.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Iterator.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.List.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.ListIterator.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Mutex.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Object.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.OutStream.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Queue.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Read.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Runtime.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Scheduler.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Semaphore.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.SmartPointer.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Stack.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.String.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.System.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.SystemHeap.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Task.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Thread.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Toggle.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Value.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.Write.hpp</automatic-include>
+                <automatic-include>interface/include/public/Configuration.hpp</automatic-include>
+                <automatic-include>interface/include/public/Definitions.hpp</automatic-include>
+                <automatic-include>interface/include/public/Object.hpp</automatic-include>
+                <automatic-include>interface/include/public/ObjectAllocator.hpp</automatic-include>
+                <automatic-include>interface/include/public/Program.hpp</automatic-include>
+                <automatic-include>interface/include/public/Types.hpp</automatic-include>                
+                <automatic-include>library/include/public/lib.AbstractBuffer.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.AbstractBaseString.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.AbstractLinkedList.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.AbstractString.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.AbstractTask.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.AbstractThreadTask.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Align.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.BaseString.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Buffer.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.CircularList.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Heap.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.LinkedList.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.LinkedNode.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Memory.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Mutex.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.MutexGuard.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.NonCopyable.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Object.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Semaphore.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.SharedPointer.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.SmartPointerDeleter.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Stack.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.String.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Thread.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Toggle.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Types.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.UniquePointer.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Error.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Mutex.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.NonCopyable.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Object.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Posix.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Scheduler.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Semaphore.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.System.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Thread.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Types.hpp</automatic-include>
+                <automatic-include>system/include/public/sys.Call.hpp</automatic-include>
+            </automatic-includes>            
+            <includes>
+                <include>interface/include/public</include>
+                <include>interface/include/private</include>
+                <include>library/include/public</include>
+                <include>system/include/public</include>
+                <include>system/include/private</include>
+                <include>../quality/sca/projects/absint/stubs/include</include>
+            </includes>
+            <defines>
+                <define>__GNUC__</define>
+                <define>__LP64__</define>
+                <define>EOOS_NO_STRICT_MISRA_RULES</define>
+            </defines>
+        </config>
+    </preprocess>
+    <reports>
+        <report-file file="../../../../build/sca/eoos-base.txt" type="text-report" />
+        <report-file file="../../../../build/sca/eoos-rulechecks.txt" type="custom" format="text" configuration="@rulechecks" />
+    </reports>    
+</dax>
