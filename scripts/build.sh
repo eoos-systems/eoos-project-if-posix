@@ -51,10 +51,7 @@ fi
 if [ "$1" == "--run" -o "$2" == "--run" -o "$3" == "--run" ]; then
     outMessage "Run unit tests" "INF"
     # @note Remove --gtest_filter key if it set
-    # --gtest_filter=MainTest*
-    # --gtest_filter=StringTest*
-    # --gtest_filter=ThreadTest*
-    # --gtest_filter=DebugTest*
+    # --gtest_filter=lib_AlignTest*
     #
     # --gtest_shuffle    
     ./codebase/tests/EoosTests --gtest_shuffle
