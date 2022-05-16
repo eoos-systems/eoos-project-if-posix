@@ -14,11 +14,11 @@
 
 typedef unsigned long int pthread_t;
 
-union pthread_attr_t
+typedef union
 {
   char __size[__SIZEOF_PTHREAD_ATTR_T];
   long int __align;
-};
+} pthread_attr_t;
 
 enum
 {
