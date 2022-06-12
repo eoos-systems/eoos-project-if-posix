@@ -3,8 +3,8 @@
 # @author    Sergey Baigudin, sergey@baigudin.software
 # @copyright 2019-2022, Sergey Baigudin, Baigudin Software
 
-cmake_minimum_required(VERSION 3.15)
-project(eoos-if-posix VERSION 1.0.0 LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.20)
+project(eoos-if-posix VERSION 0.9.0 LANGUAGES CXX)
 
 include(cmake/eoos.cmake)
 message(STATUS "EOOS option EOOS_ENABLE_TESTS=" ${EOOS_ENABLE_TESTS})

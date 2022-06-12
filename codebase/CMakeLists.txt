@@ -29,7 +29,7 @@ configure_package_config_file(
 # Create *ConfigVersion.cmake file
 write_basic_package_version_file(
     "${CMAKE_CURRENT_BINARY_DIR}/EoosConfigVersion.cmake"
-    COMPATIBILITY ExactVersion
+    COMPATIBILITY SameMajorVersion
 )
 # Install *Config.cmake and *ConfigVersion.cmake files
 install(
@@ -60,4 +60,3 @@ install(
     NAMESPACE eoos::                                                        # EXPORT_NAME added
     FILE EoosTargets.cmake
 )
-
