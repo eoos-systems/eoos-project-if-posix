@@ -1,7 +1,7 @@
-# EOOS RT.
+# EOOS.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2019-2021, Sergey Baigudin, Baigudin Software
+# @copyright 2019-2020, Sergey Baigudin, Baigudin Software
 
 add_library(target-eoos STATIC)
 
@@ -17,7 +17,7 @@ include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
 
 # Set name for 'find_package' command
-set(EOOS_CMAKE_PACKAGE_NAME "Eoos")
+set(EOOS_CMAKE_PACKAGE_NAME "EOOS")
 
 # Create *Config.cmake file
 configure_package_config_file(
@@ -41,9 +41,9 @@ install(
 
 file(GLOB EOOS_CMAKE_PUBLIC_HEADERS "${CMAKE_CURRENT_LIST_DIR}/*/include/public/*.hpp")
 set_target_properties(target-eoos PROPERTIES
-    OUTPUT_NAME Eoos
+    OUTPUT_NAME eoos
     PUBLIC_HEADER "${EOOS_CMAKE_PUBLIC_HEADERS}"
-    EXPORT_NAME eoos
+    EXPORT_NAME main
 )
 
 install(

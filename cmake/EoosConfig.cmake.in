@@ -1,9 +1,9 @@
-# EOOS RT.
+# EOOS POSIX.
 #
-# This file exports the eoos::eoos CMake target which should be passed to the target_link_libraries command.
+# This file exports the eoos::main CMake target which should be passed to the target_link_libraries command.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2020, Sergey Baigudin, Baigudin Software
+# @copyright 2020-2022, Sergey Baigudin, Baigudin Software
 
 
 @PACKAGE_INIT@
