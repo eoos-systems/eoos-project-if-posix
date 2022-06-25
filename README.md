@@ -54,7 +54,7 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake).
 
 ###### 1.1.3. Instal IDE and compiler for purposes that you need
 
-EOOS is developed within **ISO C++ standards** and can be compiled with any compilers, 
+EOOS is developed within ISO C++ standards and can be compiled with any compilers, 
 which support ISO/IEC 14882:1998 standard and ISO/IEC 14882:2011 standard for new
 features of C++ programming language.
 
@@ -78,7 +78,7 @@ $ doxygen -v
 1.8.13
 ```
 
-###### 1.1.5. Optionally install [Graphviz](http://www.graphviz.org/download/) for future documentation creation
+###### 1.1.5. Optionally install Graphviz for future documentation creation
 
 ```
 $ sudo apt-get install graphviz
