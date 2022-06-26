@@ -227,7 +227,7 @@ To build the project with Unit Tests you have to execute the commands below.
 ~/REPOSITORY/EOOS$ mkdir build
 ~/REPOSITORY/EOOS$ cd build
 ~/REPOSITORY/EOOS/build$ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DEOOS_ENABLE_TESTS=ON ..
-~/REPOSITORY/EOOS/build$ make all
+~/REPOSITORY/EOOS/build$ make -j16 all
 ```
 
 To execute the Unit Tests run the commands below.
