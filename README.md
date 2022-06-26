@@ -174,8 +174,8 @@ To build and install EOOS on Linux, execute the commads below.
 None that the *CMAKE_BUILD_TYPE* parameters can be one of *Release*, *Debug*, *RelWithDebInfo*, *MinSizeRel*, but for developing
 purpose we recommend to pass *RelWithDebInfo*.
 
-Having done all the steps, EOOS will be installed to the */usr/local* directory, and you will be able 
-to find EOOS in by using `find_package()` command in your CMake project.
+Having done all the steps, EOOS will be installed to the */usr/local/lib* and */usr/local/include* directories, and 
+you will be able to find EOOS in by using `find_package()` command in your CMake project.
 
 An example of your root *CMakeLists.txt* may be the next:
 
