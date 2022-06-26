@@ -31,3 +31,6 @@ Release
 *.bak
 *.iex
 *.__i
+
+# VS Code project files
+.vscode
