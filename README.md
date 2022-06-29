@@ -187,6 +187,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+find_package(Threads REQUIRED)
 find_package(EOOS 0.9.0 REQUIRED)
 
 add_executable(application)
@@ -198,6 +199,7 @@ PRIVATE
 
 target_link_libraries(application
 PRIVATE
+    Threads::Threads
     eoos::main
 )
 
