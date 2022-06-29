@@ -6,7 +6,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(eoos-if-posix VERSION 0.9.0 LANGUAGES CXX)
 
-include(cmake/Eoos.cmake)
+include(cmake/EOOS.cmake)
 message(STATUS "EOOS option EOOS_ENABLE_TESTS=" ${EOOS_ENABLE_TESTS})
 enable_testing()
 
