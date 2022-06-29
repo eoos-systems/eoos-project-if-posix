@@ -168,7 +168,7 @@ To build and install EOOS on Linux, execute the commads below.
 ~/REPOSITORY/EOOS$ mkdir build
 ~/REPOSITORY/EOOS$ cd build
 ~/REPOSITORY/EOOS/build$ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-~/REPOSITORY/EOOS/build$ make -j16 install
+~/REPOSITORY/EOOS/build$ sudo make -j16 install
 ```
 
 None that the *CMAKE_BUILD_TYPE* parameters can be one of *Release*, *Debug*, *RelWithDebInfo*, *MinSizeRel*, but for developing
