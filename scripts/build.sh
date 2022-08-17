@@ -39,7 +39,8 @@ cd build
 
 if [ "$1" == "--build" -o "$2" == "--build" ]; then
     outMessage "Generate CMake project" "INF"
-    cmake -DEOOS_ENABLE_TESTS=ON -DCMAKE_INSTALL_PREFIX=CMakeInstallDir -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+    # -DCMAKE_BUILD_TYPE=RelWithDebInfo
+    cmake -DEOOS_ENABLE_TESTS=ON -DEOOS_ENABLE_GCC_COVERAGE=ON -DCMAKE_INSTALL_PREFIX=CMakeInstallDir -DCMAKE_BUILD_TYPE=Debug ..
     outMessage "Call Make" "INF" -blocked
     make all
         # DESTDIR=./CMakeInstallDir

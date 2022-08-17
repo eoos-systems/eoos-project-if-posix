@@ -8,12 +8,23 @@ project(eoos-if-posix VERSION 0.9.0 LANGUAGES CXX)
 
 include(cmake/EOOS.cmake)
 message(STATUS "EOOS option EOOS_ENABLE_TESTS=" ${EOOS_ENABLE_TESTS})
+message(STATUS "EOOS option EOOS_ENABLE_GCC_COVERAGE=" ${EOOS_ENABLE_GCC_COVERAGE})
 enable_testing()
 
 set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
 add_compile_options(-Wall)
 
 add_subdirectory(extern)
 add_subdirectory(codebase)
+
+if(EOOS_ENABLE_GCC_COVERAGE)
+
+add_compile_options(-fprofile-arcs)
+add_compile_options(-ftest-coverage)
+
+endif()
+
+
