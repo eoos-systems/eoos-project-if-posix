@@ -2,9 +2,10 @@
 # This script builds a program.
 #
 # Case 1:
-# @param $1         --clean - Rebuilds the project by removing the 'build' directory.
-# @param $1,$2      --build - Compiles the project by calling 'make'.
-# @param $1,$2,$3   --run   - Runs the project unit tests.
+# @param $1         --clean     - Rebuilds the project by removing the 'build' directory.
+# @param $1,$2      --build     - Compiles the project by calling 'make'.
+# @param $1,$2,$3   --run       - Runs the project unit tests.
+# @param $1,$2,$3   --coverage  - Creates coverage report.
 #
 # Case 2:
 # @param $1         --sca   - Runs the SCA report creation.
@@ -40,13 +41,18 @@ cd build
 if [ "$1" == "--build" -o "$2" == "--build" ]; then
     outMessage "Generate CMake project" "INF"
     # -DCMAKE_BUILD_TYPE=RelWithDebInfo
-    cmake -DEOOS_ENABLE_TESTS=ON -DEOOS_ENABLE_GCC_COVERAGE=ON -DCMAKE_INSTALL_PREFIX=CMakeInstallDir -DCMAKE_BUILD_TYPE=Debug ..
+    cmake -DEOOS_ENABLE_TESTS=ON -DEOOS_ENABLE_GCC_COVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ..
     outMessage "Call Make" "INF" -blocked
     make all
         # DESTDIR=./CMakeInstallDir
         # VERBOSE=1
         # -j16
         # install
+fi
+
+if [ "$1" == "--coverage" -o "$2" == "--coverage" -o "$3" == "--coverage" ]; then
+    outMessage "Run unit test coverage" "INF"
+    make coverage
 fi
 
 if [ "$1" == "--run" -o "$2" == "--run" -o "$3" == "--run" ]; then
