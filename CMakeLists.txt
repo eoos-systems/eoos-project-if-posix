@@ -8,7 +8,6 @@ project(eoos-if-posix VERSION 0.9.0 LANGUAGES CXX)
 
 include(cmake/EOOS.cmake)
 
-
 if(EOOS_ENABLE_GCC_COVERAGE)
 # @todo Rework this CMake module or avoid its usage, as
 # it warnings on CMakeCCompilerId.gcno produced by GCOV
@@ -41,4 +40,3 @@ setup_target_for_coverage_gcovr_html(
             "${PROJECT_SOURCE_DIR}/codebase/system/source/sys.Main.cpp"
 )
 endif()
-
