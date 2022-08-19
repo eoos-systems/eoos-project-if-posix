@@ -69,7 +69,7 @@ $ g++ --version
 g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
 ```
 
-###### 1.1.4. Optionally install Doxygen for future documentation creation
+###### 1.1.4. Install Doxygen for future documentation creation
 
 ```
 $ sudo apt-get install doxygen
@@ -78,7 +78,7 @@ $ doxygen -v
 1.8.13
 ```
 
-###### 1.1.5. Optionally install Graphviz for future documentation creation
+###### 1.1.5. Install Graphviz for future documentation creation
 
 ```
 $ sudo apt-get install graphviz
@@ -87,7 +87,7 @@ $ dot -version
 dot - graphviz version 2.40.1 (20161225.0304)
 ```
 
-###### 1.1.6. Optionally install [Python 3.7 or higher](https://www.python.org/downloads/) for future automation
+###### 1.1.6. Install [Python 3.7 or higher](https://www.python.org/downloads/) for automation
 
 Check your version is not 3.7
 
@@ -120,6 +120,51 @@ Check your version is 3.7
 ```
 $ python3 -V
 Python 3.7.5
+```
+
+###### 1.1.7. Install Pip for Python 3.7 for automation
+
+```
+$ sudo apt-get update
+$ sudo apt-get -y install python3-pip
+$ pip3 --version
+pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.7)
+```
+
+###### 1.1.8. Install Pip for Python 2.7 for automation
+
+Check your version is 2.7 for Ubuntu 18.04 LTS by default
+
+```
+$ python --version
+Python 2.7.17
+```
+
+Install Pip
+
+```
+$ sudo apt-get update
+$ sudo apt-get -y install python-pip
+$ pip --version
+pip 9.0.1 from /usr/lib/python2.7/dist-packages (python 2.7)
+```
+
+###### 1.1.9. Install GCOVR and LCOV for unit tests reports generation
+
+Install GCOVR
+
+```
+$ pip install gcovr
+$ gcovr --version
+gcovr 4.2
+```
+
+Install LCOV
+
+```
+$ sudo apt-get install lcov
+$ lcov --version
+lcov: LCOV version 1.13
 ```
 
 
