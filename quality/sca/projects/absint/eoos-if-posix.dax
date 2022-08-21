@@ -92,26 +92,13 @@
         <config name="ALL_LIB">
             <language>C++</language>
             <files>
-                <file>interface/source/Allocator.cpp</file>                
                 <file>system/source/sys.Call.cpp</file>
+                <file>system/source/sys.Configuration.cpp</file>
                 <file>system/source/sys.Main.cpp</file>
                 <file>system/source/sys.Scheduler.cpp</file>
-                <file>system/source/sys.System.cpp</file>                
+                <file>system/source/sys.System.cpp</file>
             </files>
             <automatic-includes>
-                <automatic-include>interface/include/private/api.Cpu.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.CpuInterrupt.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.CpuPll.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.CpuRegisters.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.CpuTimer.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.SysInterrupt.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.SysMutex.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.SysResource.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.SysSemaphore.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.SysSynchronizable.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.SysThread.hpp</automatic-include>
-                <automatic-include>interface/include/private/api.SysTimer.hpp</automatic-include>
-                <automatic-include>interface/include/public/Allocator.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.Collection.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.Heap.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.IllegalValue.hpp</automatic-include>
@@ -123,35 +110,27 @@
                 <automatic-include>interface/include/public/api.Object.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.OutStream.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.Queue.hpp</automatic-include>
-                <automatic-include>interface/include/public/api.Read.hpp</automatic-include>
-                <automatic-include>interface/include/public/api.Runtime.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.Scheduler.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.Semaphore.hpp</automatic-include>
+                <automatic-include>interface/include/public/api.SequenceContainer.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.SmartPointer.hpp</automatic-include>
-                <automatic-include>interface/include/public/api.Stack.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.String.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.System.hpp</automatic-include>
-                <automatic-include>interface/include/public/api.SystemHeap.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.Task.hpp</automatic-include>
                 <automatic-include>interface/include/public/api.Thread.hpp</automatic-include>
-                <automatic-include>interface/include/public/api.Toggle.hpp</automatic-include>
-                <automatic-include>interface/include/public/api.Value.hpp</automatic-include>
-                <automatic-include>interface/include/public/api.Write.hpp</automatic-include>
-                <automatic-include>interface/include/public/Configuration.hpp</automatic-include>
                 <automatic-include>interface/include/public/Definitions.hpp</automatic-include>
-                <automatic-include>interface/include/public/Object.hpp</automatic-include>
-                <automatic-include>interface/include/public/ObjectAllocator.hpp</automatic-include>
                 <automatic-include>interface/include/public/Program.hpp</automatic-include>
-                <automatic-include>interface/include/public/Types.hpp</automatic-include>                
-                <automatic-include>library/include/public/lib.AbstractBuffer.hpp</automatic-include>
+                <automatic-include>interface/include/public/Types.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.AbstractBaseString.hpp</automatic-include>
-                <automatic-include>library/include/public/lib.AbstractLinkedList.hpp</automatic-include>
-                <automatic-include>library/include/public/lib.AbstractString.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.AbstractBuffer.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.AbstractList.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.AbstractTask.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.AbstractThreadTask.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.Align.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Allocator.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.BaseString.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.Buffer.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.CharTrait.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.CircularList.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.Heap.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.LinkedList.hpp</automatic-include>
@@ -161,19 +140,22 @@
                 <automatic-include>library/include/public/lib.MutexGuard.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.NonCopyable.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.Object.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.ObjectAllocator.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.Semaphore.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.SharedPointer.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.SmartPointerDeleter.hpp</automatic-include>
-                <automatic-include>library/include/public/lib.Stack.hpp</automatic-include>
+                <automatic-include>library/include/public/lib.Stream.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.String.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.Thread.hpp</automatic-include>
-                <automatic-include>library/include/public/lib.Toggle.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.Types.hpp</automatic-include>
                 <automatic-include>library/include/public/lib.UniquePointer.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Configuration.hpp</automatic-include>
                 <automatic-include>system/include/private/sys.Error.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.Heap.hpp</automatic-include>
                 <automatic-include>system/include/private/sys.Mutex.hpp</automatic-include>
                 <automatic-include>system/include/private/sys.NonCopyable.hpp</automatic-include>
                 <automatic-include>system/include/private/sys.Object.hpp</automatic-include>
+                <automatic-include>system/include/private/sys.OutStreamChar.hpp</automatic-include>
                 <automatic-include>system/include/private/sys.Posix.hpp</automatic-include>
                 <automatic-include>system/include/private/sys.Scheduler.hpp</automatic-include>
                 <automatic-include>system/include/private/sys.Semaphore.hpp</automatic-include>
@@ -184,7 +166,6 @@
             </automatic-includes>            
             <includes>
                 <include>interface/include/public</include>
-                <include>interface/include/private</include>
                 <include>library/include/public</include>
                 <include>system/include/public</include>
                 <include>system/include/private</include>
@@ -193,7 +174,7 @@
             <defines>
                 <define>__GNUC__</define>
                 <define>__LP64__</define>
-                <define>EOOS_NO_STRICT_MISRA_RULES</define>
+                <define>EOOS_ENABLE_DYNAMIC_HEAP_MEMORY</define>
             </defines>
         </config>
     </preprocess>
