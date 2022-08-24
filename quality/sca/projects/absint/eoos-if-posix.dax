@@ -93,7 +93,6 @@
             <language>C++</language>
             <files>
                 <file>system/source/sys.Call.cpp</file>
-                <file>system/source/sys.Configuration.cpp</file>
                 <file>system/source/sys.Main.cpp</file>
                 <file>system/source/sys.Scheduler.cpp</file>
                 <file>system/source/sys.System.cpp</file>
