@@ -12,6 +12,11 @@ EOOS Automotive POSIX is developed within **ISO C++ standards**, complied with *
 **AUTOSAR C++14 Coding Guidelines**, and relies on **ISO 26262** that means applications based on EOOS 
 **can be used in critical and safety-related systems**.
 
+Quality of EOOS Automotive POSIX:
+
+- MISRA C++: **0** violations
+- Unit Tests coverage: **96.5%**
+
 ---
 
 ## 1. How-to Build Project
