@@ -25,7 +25,7 @@ if [ "$1" == "--clean" ]; then
     outMessage "Clean flag is set" "INF"
     if [ -d "build" ]; then
     	outMessage "Remove built directory" "INF"
-        rm -r build
+        rm -rf build
     fi
 fi
 if [ ! -d "build" ]; then
