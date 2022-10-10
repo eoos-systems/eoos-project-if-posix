@@ -28,7 +28,12 @@ the static library and installs it on an UNIX OS for being found by CMake projec
 
 #### 1.1. Prerequisites on Linux
 
-The process described below is passed on Ubuntu 18.04 LTS (x86_64) and requires the next tool to be installed on it:
+The process described below is passed on 
+ 
+ - Ubuntu 18.04 LTS (x86_64) 
+ - Ubuntu 22.04 LTS (x86_64)
+
+ and requires the next tool to be installed on it:
 
 ###### 1.1.1. Install [Git for Linux and Unix](https://git-scm.com/download/linux)
 
@@ -72,6 +77,16 @@ gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
 
 $ g++ --version
 g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+```
+
+Compiler on Ubuntu 22.04 LTS can be checked as well in Terminal
+
+```
+$ gcc --version
+gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
+
+$ g++ --version
+g++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 ```
 
 ###### 1.1.4. Install Doxygen for future documentation creation
