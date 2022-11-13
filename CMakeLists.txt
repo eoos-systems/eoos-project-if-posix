@@ -3,7 +3,7 @@
 # @author    Sergey Baigudin, sergey@baigudin.software
 # @copyright 2019-2022, Sergey Baigudin, Baigudin Software
 
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10)
 project(eoos-if-posix VERSION 0.10.0 LANGUAGES CXX)
 
 include(cmake/EOOS.cmake)
