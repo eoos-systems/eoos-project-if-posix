@@ -10,6 +10,9 @@
 [submodule "codebase/tests"]
 	path = codebase/tests
 	url = ../eoos-tests.git
+[submodule "scripts"]
+	path = scripts
+	url = ../eoos-scripts.git
 [submodule "extern/googletest"]
 	path = extern/googletest
 	url = git@github.com:google/googletest.git
