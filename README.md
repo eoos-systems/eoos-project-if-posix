@@ -1,5 +1,6 @@
 # EOOS Automotive POSIX
 ---
+
 **EOOS copyrights reserved in [Rospatent Federal Service for Intellectual Property]( https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2017664105&TypeFile=html), Russian Federation**
 
 EOOS Automotive for POSIX based operating systems is a **C++ library for cross-platform development** of 
@@ -33,7 +34,7 @@ The process described below is passed on
  - Ubuntu 18.04 LTS (x86_64) 
  - Ubuntu 22.04 LTS (x86_64)
 
- and requires the next tool to be installed on it:
+and requires the next tool to be installed on it:
 
 ###### 1.1.1. Install [Git for Linux and Unix](https://git-scm.com/download/linux)
 
@@ -48,18 +49,16 @@ $ git --version
 git version 2.17.1
 ```
 
-###### 1.1.2. Install [CMake 3.20 or higher](https://cmake.org/download/)
+###### 1.1.2. Install [CMake 3.10 or higher](https://cmake.org/download/)
 
-CMake minimum required version 3.20 for EOOS project.
+CMake minimum required version 3.10 for EOOS project.
 
 
 Download and install CMake from the web-site. Check CMake version in Terminal.
 
 ```
 C:\> cmake --version
-cmake version 3.20.6
-
-CMake suite maintained and supported by Kitware (kitware.com/cmake).
+cmake version 3.10.6
 ```
 
 ###### 1.1.3. Instal IDE and compiler for purposes that you need
