@@ -88,48 +88,48 @@ $ g++ --version
 g++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 ```
 
-###### 1.1.4. Install [Python 3.10 or higher](https://www.python.org/downloads/) for automation
+###### 1.1.4. Install [Python 3.7 or higher](https://www.python.org/downloads/) for automation
 
-Check your version is not 3.10
+Check your version is not 3.7
 
 ```
 $ python3 --version
 Python 3.6.9
 ```
  
-Install version 3.10
+Install version 3.7
 
 ```
-$ sudo apt-get install python3.10
+$ sudo apt-get install python3.7
 ```
  
 Update Python alternatives
 
 ```
 $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
-$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 2
+$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
 ```
  
-Configure vession 3.10 as default
+Configure vession 3.7 as default
 
 ```
 $ sudo update-alternatives --config python3
 ``` 
 
-Check your version is 3.10
+Check your version is 3.7
 
 ```
 $ python3 --version
-Python 3.10.6
+Python 3.7.6
 ```
 
-###### 1.1.5. Install Pip for Python 3.10 for automation
+###### 1.1.5. Install Pip for Python 3.7 for automation
 
 ```
 $ sudo apt-get update
 $ sudo apt-get -y install python3-pip
 $ pip3 --version
-pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.7)
 ```
 
 ###### 1.1.6. Install GCOVR and LCOV for unit tests reports generation
