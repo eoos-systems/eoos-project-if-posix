@@ -1,1131 +1,1010 @@
-
+<!DOCTYPE html>
 <html>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title>Head</title>
-  <style media="screen" type="text/css">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>GCC Code Coverage Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="index.css">
+  </head>
 
-    body
-    {
-      color: #000000;
-      background-color: #FFFFFF;
-    }
+  <body>
+    <header>
+      <h1>GCC Code Coverage Report</h1>
 
-    /* Link formats: use maroon w/underlines */
-    a:link
-    {
-      color: navy;
-      text-decoration: underline;
-    }
-    a:visited
-    {
-      color: maroon;
-      text-decoration: underline;
-    }
-    a:active
-    {
-      color: navy;
-      text-decoration: underline;
-    }
+      <hr/>
 
-    /*** TD formats ***/
-    td
-    {
-      font-family: sans-serif;
-    }
-    td.title
-    {
-      text-align: center;
-      padding-bottom: 10px;
-      font-size: 20pt;
-      font-weight: bold;
-    }
-
-    /* TD Header Information */
-    td.headerName
-    {
-      text-align: right;
-      color: black;
-      padding-right: 6px;
-      font-weight: bold;
-      vertical-align: top;
-      white-space: nowrap;
-    }
-    td.headerValue
-    {
-      text-align: left;
-      color: blue;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-    td.headerTableEntry
-    {
-      text-align: right;
-      color: black;
-      font-weight: bold;
-      white-space: nowrap;
-      padding-left: 12px;
-      padding-right: 4px;
-      background-color: LightBlue;
-    }
-    td.headerValueLeg
-    {
-      text-align: left;
-      color: black;
-      font-size: 80%;
-      white-space: nowrap;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 2px;
-    }
-
-    /* Color of horizontal ruler */
-    td.hr
-    {
-      background-color: navy;
-      height:3px;
-    }
-    /* Footer format */
-    td.footer
-    {
-      text-align: center;
-      padding-top: 3px;
-      font-family: sans-serif;
-    }
-
-    /* Coverage Table */
-
-    td.coverTableHead
-    {
-      text-align: center;
-      color: white;
-      background-color: SteelBlue;
-      font-family: sans-serif;
-      font-size: 120%;
-      white-space: nowrap;
-      padding-left: 4px;
-      padding-right: 4px;
-    }
-    td.coverFile
-    {
-      text-align: left;
-      padding-left: 10px;
-      padding-right: 20px;
-      color: black;
-      background-color: LightBlue;
-      font-family: monospace;
-      font-weight: bold;
-      font-size: 110%;
-    }
-    td.coverBar
-    {
-      padding-left: 10px;
-      padding-right: 10px;
-      background-color: LightBlue;
-    }
-    td.coverBarOutline
-    {
-      background-color: white;
-    }
-    td.coverValue
-    {
-      padding-top: 2px;
-      text-align: right;
-      padding-left: 10px;
-      padding-right: 10px;
-      font-family: sans-serif;
-      white-space: nowrap;
-      font-weight: bold;
-    }
-
-    /* Link Details */
-    a.detail:link
-    {
-      color: #B8D0FF;
-      font-size:80%;
-    }
-    a.detail:visited
-    {
-      color: #B8D0FF;
-      font-size:80%;
-    }
-    a.detail:active
-    {
-      color: #FFFFFF;
-      font-size:80%;
-    }
-
-    .graphcont{
-        color:#000;
-        font-weight:700;
-        float:left
-    }
-
-    .graph{
-        float:left;
-        background-color: white;
-        position:relative;
-        width:280px;
-        padding:0
-    }
-
-    .graph .bar{
-        display:block;
-        position:relative;
-        border:black 1px solid;
-        text-align:center;
-        color:#fff;
-        height:10px;
-        font-family:Arial,Helvetica,sans-serif;
-        font-size:12px;
-        line-height:1.9em
-    }
-
-    .graph .bar span{
-        position:absolute;
-        left:1em
-    }
-
-    td.coveredLine,
-    span.coveredLine
-    {
-        background-color: LightGreen!important;
-    }
-
-    td.uncoveredLine,
-    span.uncoveredLine
-    {
-        background-color: LightPink!important;
-    }
-
-    .linebranch, .linecount
-    {
-        border-right: 1px gray solid;
-        background-color: lightgray;
-    }
-
-    span.takenBranch
-    {
-        color: Green!important;
-        cursor: help;
-    }
-
-    span.notTakenBranch
-    {
-        color: Red!important;
-        cursor: help;
-    }
-
-    .src
-    {
-        padding-left: 12px;
-    }
-
-    .srcHeader,
-    span.takenBranch,
-    span.notTakenBranch
-    {
-        font-family: monospace;
-        font-weight: bold;
-    }
-
-    pre
-    {
-        height : 15px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .lineno
-    {
-        background-color: #EFE383;
-        border-right: 1px solid #BBB15F;
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <table width="100%" border=0 cellspacing=0 cellpadding=0>
-    <tr><td class="title">GCC Code Coverage Report</td></tr>
-    <tr><td class="hr"></td></tr>
-
+      <div class="summary">
+<div>
+  <table class="legend">
     <tr>
-      <td width="100%">
-        <table cellpadding=1 border=0 width="100%">
-          <tr>
-            <td width="10%" class="headerName">Directory:</td>
-            <td width="35%" class="headerValue">codebase/</td>
-            <td width="5%"></td>
-            <td width="15%"></td>
-            <td width="10%" class="headerValue" style="text-align:right;">Exec</td>
-            <td width="10%" class="headerValue" style="text-align:right;">Total</td>
-            <td width="15%" class="headerValue" style="text-align:right;">Coverage</td>
-          </tr>
-          <tr>
-            <td class="headerName">Date:</td>
-            <td class="headerValue">2022-08-27 21:43:34</td>
-            <td></td>
-            <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">2118</td>
-            <td class="headerTableEntry">2194</td>
-            <td class="headerTableEntry" style="background-color:LightGreen">96.5 %</td>
-          </tr>
-          <tr>
-            <td class="headerName">Legend:</td>
-            <td class="headerValueLeg">
-              <span style="background-color:LightPink">low: &lt; 75.0 %</span>
-              <span style="background-color:#FFFF55">medium: &gt;= 75.0 %</span>
-              <span style="background-color:LightGreen">high: &gt;= 90.0 %</span>
-            </td>
-            <td></td>
-            <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">1521</td>
-            <td class="headerTableEntry">2575</td>
-            <td class="headerTableEntry" style="background-color:LightPink">59.1 %</td>
-          </tr>
-        </table>
+      <th scope="row">Directory:</th>
+      <td>codebase/</td>
+    </tr>
+    <tr>
+      <th scope="row">Date:</th>
+      <td>2023-03-16 04:37:09</td>
+    </tr>
+    <tr>
+      <th scope="row">Coverage:</th>
+      <td class="legend">
+        <span class="coverage-low">low: &ge; 0%</span>
+        <span class="coverage-medium">medium: &ge; 75.0%</span>
+        <span class="coverage-high">high: &ge; 90.0%</span>
       </td>
-    </tr>
-
-    <tr><td class="hr"></td></tr>
-  </table>
-
-  <center>
-  <table width="80%" cellpadding=1 cellspacing=1 border=0>
-    <tr>
-      <td width="44%"><br></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
-    </tr>
-    <tr>
-      <td class="coverTableHead">File</td>
-      <td class="coverTableHead" colspan=3>Lines</td>
-      <td class="coverTableHead" colspan=2>Branches</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.Collection.hpp.html">interface/include/public/api.Collection.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.Heap.hpp.html">interface/include/public/api.Heap.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.IllegalValue.hpp.html">interface/include/public/api.IllegalValue.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.Iterable.hpp.html">interface/include/public/api.Iterable.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.Iterator.hpp.html">interface/include/public/api.Iterator.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.List.hpp.html">interface/include/public/api.List.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.ListIterator.hpp.html">interface/include/public/api.ListIterator.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.Mutex.hpp.html">interface/include/public/api.Mutex.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.Object.hpp.html">interface/include/public/api.Object.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.OutStream.hpp.html">interface/include/public/api.OutStream.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.Queue.hpp.html">interface/include/public/api.Queue.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.Scheduler.hpp.html">interface/include/public/api.Scheduler.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.Semaphore.hpp.html">interface/include/public/api.Semaphore.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.SequenceContainer.hpp.html">interface/include/public/api.SequenceContainer.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.SmartPointer.hpp.html">interface/include/public/api.SmartPointer.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.String.hpp.html">interface/include/public/api.String.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.System.hpp.html">interface/include/public/api.System.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_interface_include_public_api.Task.hpp.html">interface/include/public/api.Task.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_interface_include_public_api.Thread.hpp.html">interface/include/public/api.Thread.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.AbstractBaseString.hpp.html">library/include/public/lib.AbstractBaseString.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">144 / 144</td>
-      <td class="CoverValue" style="background-color:LightPink;">67.1&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">212 / 316</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.AbstractBuffer.hpp.html">library/include/public/lib.AbstractBuffer.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">58 / 58</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">89.3&nbsp;%</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">25 / 28</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.AbstractList.hpp.html">library/include/public/lib.AbstractList.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:96.1%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.1&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">147 / 153</td>
-      <td class="CoverValue" style="background-color:LightPink;">58.6&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">99 / 169</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.AbstractTask.hpp.html">library/include/public/lib.AbstractTask.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">8 / 8</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.AbstractThreadTask.hpp.html">library/include/public/lib.AbstractThreadTask.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">12 / 12</td>
-      <td class="CoverValue" style="background-color:LightPink;">50.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">1 / 2</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.Align.hpp.html">library/include/public/lib.Align.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">66 / 66</td>
-      <td class="CoverValue" style="background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGreen;">38 / 38</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.Allocator.hpp.html">library/include/public/lib.Allocator.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">4 / 4</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.BaseString.hpp.html">library/include/public/lib.BaseString.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">233 / 233</td>
-      <td class="CoverValue" style="background-color:LightPink;">41.8&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">169 / 404</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.Buffer.hpp.html">library/include/public/lib.Buffer.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">58 / 58</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">85.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">34 / 40</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.CharTrait.hpp.html">library/include/public/lib.CharTrait.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:96.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">24 / 25</td>
-      <td class="CoverValue" style="background-color:LightPink;">74.3&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">101 / 136</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.CircularList.hpp.html">library/include/public/lib.CircularList.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:98.2%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.2&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">110 / 112</td>
-      <td class="CoverValue" style="background-color:LightPink;">45.3&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">58 / 128</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.Heap.hpp.html">library/include/public/lib.Heap.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:88.7%; background-color:yellow"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:#FFFF55;">88.7&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:#FFFF55;">157 / 177</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">76.9&nbsp;%</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">83 / 108</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.LinkedList.hpp.html">library/include/public/lib.LinkedList.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:98.2%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">98.2&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">111 / 113</td>
-      <td class="CoverValue" style="background-color:LightPink;">42.8&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">62 / 145</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.LinkedNode.hpp.html">library/include/public/lib.LinkedNode.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">44 / 44</td>
-      <td class="CoverValue" style="background-color:LightPink;">68.8&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">11 / 16</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.Memory.hpp.html">library/include/public/lib.Memory.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">168 / 168</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">83.8&nbsp;%</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">274 / 327</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.Mutex.hpp.html">library/include/public/lib.Mutex.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:93.9%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">93.9&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">31 / 33</td>
-      <td class="CoverValue" style="background-color:LightPink;">25.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">7 / 28</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.MutexGuard.hpp.html">library/include/public/lib.MutexGuard.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:94.1%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">94.1&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">16 / 17</td>
-      <td class="CoverValue" style="background-color:LightPink;">37.5&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">6 / 16</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.NonCopyable.hpp.html">library/include/public/lib.NonCopyable.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">4 / 4</td>
-      <td class="CoverValue" style="background-color:LightPink;">0.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">0 / 4</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.Object.hpp.html">library/include/public/lib.Object.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">33 / 33</td>
-      <td class="CoverValue" style="background-color:LightPink;">42.9&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">12 / 28</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.ObjectAllocator.hpp.html">library/include/public/lib.ObjectAllocator.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">9 / 9</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.Semaphore.hpp.html">library/include/public/lib.Semaphore.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">25 / 25</td>
-      <td class="CoverValue" style="background-color:LightPink;">64.3&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">9 / 14</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.SharedPointer.hpp.html">library/include/public/lib.SharedPointer.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:93.9%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">93.9&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">124 / 132</td>
-      <td class="CoverValue" style="background-color:LightPink;">37.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">68 / 184</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.SmartPointerDeleter.hpp.html">library/include/public/lib.SmartPointerDeleter.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">6 / 6</td>
-      <td class="CoverValue" style="background-color:LightPink;">66.7&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">4 / 6</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.Stream.hpp.html">library/include/public/lib.Stream.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">4 / 4</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.Thread.hpp.html">library/include/public/lib.Thread.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">54 / 54</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">78.3&nbsp;%</td>
-      <td class="CoverValue" style="background-color:#FFFF55;">36 / 46</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_library_include_public_lib.Types.hpp.html">library/include/public/lib.Types.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_library_include_public_lib.UniquePointer.hpp.html">library/include/public/lib.UniquePointer.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:97.6%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97.6&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">83 / 85</td>
-      <td class="CoverValue" style="background-color:LightPink;">50.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">39 / 78</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_system_include_private_sys.Configuration.hpp.html">system/include/private/sys.Configuration.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">4 / 4</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_system_include_private_sys.Heap.hpp.html">system/include/private/sys.Heap.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:95.8%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">95.8&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">23 / 24</td>
-      <td class="CoverValue" style="background-color:LightPink;">50.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">5 / 10</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_system_include_private_sys.Mutex.hpp.html">system/include/private/sys.Mutex.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:92.9%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">92.9&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">39 / 42</td>
-      <td class="CoverValue" style="background-color:LightPink;">50.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">9 / 18</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_system_include_private_sys.NonCopyable.hpp.html">system/include/private/sys.NonCopyable.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">4 / 4</td>
-      <td class="CoverValue" style="background-color:LightPink;">25.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">1 / 4</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_system_include_private_sys.Object.hpp.html">system/include/private/sys.Object.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">4 / 4</td>
-      <td class="CoverValue" style="background-color:LightPink;">25.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">1 / 4</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_system_include_private_sys.OutStreamChar.hpp.html">system/include/private/sys.OutStreamChar.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:96.6%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">96.6&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">28 / 29</td>
-      <td class="CoverValue" style="background-color:LightPink;">50.0&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">7 / 14</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_system_include_private_sys.Semaphore.hpp.html">system/include/private/sys.Semaphore.hpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:93.6%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">93.6&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">44 / 47</td>
-      <td class="CoverValue" style="background-color:LightPink;">54.2&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">13 / 24</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_system_include_private_sys.Thread.hpp.html">system/include/private/sys.Thread.hpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:90.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">90.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">81 / 90</td>
-      <td class="CoverValue" style="background-color:LightPink;">62.1&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">41 / 66</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_system_source_sys.Call.cpp.html">system/source/sys.Call.cpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:100.0%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">100.0&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">2 / 2</td>
-      <td class="CoverValue" style="background-color:LightGray;">-&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightGray;">0 / 0</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" style="background-color:LightSteelBlue"><a href="index.codebase_system_source_sys.Scheduler.cpp.html">system/source/sys.Scheduler.cpp</a></td>
-      <td class="coverBar" align="center" style="background-color:LightSteelBlue">
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:97.7%; background-color:green"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">97.7&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:LightGreen;">42 / 43</td>
-      <td class="CoverValue" style="background-color:LightPink;">54.5&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">24 / 44</td>
-    </tr>
-
-
-    <tr>
-      <td class="coverFile" ><a href="index.codebase_system_source_sys.System.cpp.html">system/source/sys.System.cpp</a></td>
-      <td class="coverBar" align="center" >
-        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline">
-                <div class="graph"><strong class="bar" style="width:84.1%; background-color:yellow"></strong></div>
-                </td></tr></table>
-      </td>
-      <td class="CoverValue" style="font-weight:bold; background-color:#FFFF55;">84.1&nbsp;%</td>
-      <td class="CoverValue" style="font-weight:bold; background-color:#FFFF55;">74 / 88</td>
-      <td class="CoverValue" style="background-color:LightPink;">55.4&nbsp;%</td>
-      <td class="CoverValue" style="background-color:LightPink;">72 / 130</td>
-    </tr>
-
-
-    <tr>
-      <td width="44%"><br></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
-      <td width="8%"></td>
     </tr>
   </table>
-  </center>
+</div>
 
-  <table width="100%" border=0 cellspacing=0 cellpadding=0>
-    <tr><td class="hr"><td></tr>
-    <tr><td class="footer">Generated by: <a href="http://gcovr.com">GCOVR (Version 4.2)</a></td></tr>
+<div>
+  <table class="coverage">
+    <tr>
+      <th></th>
+      <th scope="col">Exec</th>
+      <th scope="col">Total</th>
+      <th scope="col">Coverage</th>
+    </tr>
+    <tr>
+      <th scope="row">Lines:</th>
+      <td>2113</td>
+      <td>2189</td>
+      <td class="coverage-high">96.5%</td>
+    </tr>
+    <tr>
+      <th scope="row">Functions:</th>
+      <td>712</td>
+      <td>900</td>
+      <td class="coverage-medium">79.1%</td>
+    </tr>
+    <tr>
+      <th scope="row">Branches:</th>
+      <td>931</td>
+      <td>1269</td>
+      <td class="coverage-low">73.4%</td>
+    </tr>
   </table>
-  <br>
+</div>
+      </div>
 
-</body>
+      <hr/>
+    </header>
 
+    <nav>
+<a href="index.functions.html">List of functions</a>
+    </nav>
+
+    <main>
+<table class="file-list">
+  <col/>
+  <colgroup span="3"/>
+  <colgroup span="2"/>
+  <colgroup span="2"/>
+
+  <tr>
+    <th scope="col">File</th>
+    <th scope="colgroup" colspan=3>Lines</th>
+    <th scope="colgroup" colspan=2>Functions</th>
+    <th scope="colgroup" colspan=2>Branches</th>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Collection.hpp.8d12d6fe0eee186d58d28825cf22f55e.html">interface/include/public/api.Collection.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">3 / 3</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Heap.hpp.ba21e86f37d44fe2cdd0cc69998eba00.html">interface/include/public/api.Heap.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.IllegalValue.hpp.07760186115f8029024a8a2b4f5427ef.html">interface/include/public/api.IllegalValue.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Iterable.hpp.560c3b248fbd24c79ce0c989d0183ab5.html">interface/include/public/api.Iterable.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Iterator.hpp.41a21237742a31af911fcd0d51ed0150.html">interface/include/public/api.Iterator.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-low">50.0%</td>
+    <td class="CoverValue function-coverage coverage-low">1 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.List.hpp.fdf197ec3ff6da55a1c72c67a304b72d.html">interface/include/public/api.List.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.ListIterator.hpp.e717f222891f656a9fb0819bfb6d7e8f.html">interface/include/public/api.ListIterator.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-low">50.0%</td>
+    <td class="CoverValue function-coverage coverage-low">1 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Mutex.hpp.3586194bf1c3b1500ba84348a7c90850.html">interface/include/public/api.Mutex.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Object.hpp.33edff826e7d96b8915ae3675425a606.html">interface/include/public/api.Object.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.OutStream.hpp.e1a87dff7ef586c78240d226750d96f8.html">interface/include/public/api.OutStream.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Queue.hpp.856d591b62a923b97e916a50b308bc4d.html">interface/include/public/api.Queue.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Scheduler.hpp.2275f419cce83bbd38b8893387daf61c.html">interface/include/public/api.Scheduler.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Semaphore.hpp.16cb2a0c916b3e158eeff2b30392bc9a.html">interface/include/public/api.Semaphore.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.SequenceContainer.hpp.7cbfbbacbc1e4b8c53c32da9974092c4.html">interface/include/public/api.SequenceContainer.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.SmartPointer.hpp.eb243eae9d0a0b7c26419d3129037cbf.html">interface/include/public/api.SmartPointer.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">5 / 5</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.String.hpp.6cad349871d2900de639299d03c53909.html">interface/include/public/api.String.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.System.hpp.49bc615ebaa7f5e715f6566c5ff686bd.html">interface/include/public/api.System.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Task.hpp.edbffc2bfdeac571d475b4a6602b8289.html">interface/include/public/api.Task.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.api.Thread.hpp.e9eeaecef15acea3fda393475e9a0bf7.html">interface/include/public/api.Thread.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.AbstractBaseString.hpp.07dcbe753a5104002bb92e7eb75ec5f8.html">library/include/public/lib.AbstractBaseString.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">143 / 143</td>
+    <td class="CoverValue function-coverage coverage-medium">87.9%</td>
+    <td class="CoverValue function-coverage coverage-medium">51 / 58</td>
+    <td class="CoverValue branch-coverage coverage-medium">81.9%</td>
+    <td class="CoverValue branch-coverage coverage-medium">68 / 83</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.AbstractBuffer.hpp.3ce1ad44c391865b833278b78c9f5cda.html">library/include/public/lib.AbstractBuffer.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">59 / 59</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">14 / 14</td>
+    <td class="CoverValue branch-coverage coverage-medium">89.3%</td>
+    <td class="CoverValue branch-coverage coverage-medium">25 / 28</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.AbstractList.hpp.d3e041a7d648473af1e714ea55123482.html">library/include/public/lib.AbstractList.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="96.1" title="96.1%">96.1</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">96.1%</td>
+    <td class="CoverValue line-coverage coverage-high">149 / 155</td>
+    <td class="CoverValue function-coverage coverage-low">57.6%</td>
+    <td class="CoverValue function-coverage coverage-low">53 / 92</td>
+    <td class="CoverValue branch-coverage coverage-medium">79.5%</td>
+    <td class="CoverValue branch-coverage coverage-medium">66 / 83</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.AbstractTask.hpp.5ea94245f64795fd0684100deb48c5dd.html">library/include/public/lib.AbstractTask.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">8 / 8</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">4 / 4</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.AbstractThreadTask.hpp.a93aaf57bd98b91f9db70117fa00beef.html">library/include/public/lib.AbstractThreadTask.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">12 / 12</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">5 / 5</td>
+    <td class="CoverValue branch-coverage coverage-low">50.0%</td>
+    <td class="CoverValue branch-coverage coverage-low">1 / 2</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Align.hpp.9bd7eb099ac388733fb15cb0106fb2a4.html">library/include/public/lib.Align.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">66 / 66</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">59 / 59</td>
+    <td class="CoverValue branch-coverage coverage-high">100.0%</td>
+    <td class="CoverValue branch-coverage coverage-high">10 / 10</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Allocator.hpp.1f3c187052260f34f2db5e440a02bc1e.html">library/include/public/lib.Allocator.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">4 / 4</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.BaseString.hpp.bc9323ebd34a8989e6c8961524034dcd.html">library/include/public/lib.BaseString.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">236 / 236</td>
+    <td class="CoverValue function-coverage coverage-medium">82.8%</td>
+    <td class="CoverValue function-coverage coverage-medium">96 / 116</td>
+    <td class="CoverValue branch-coverage coverage-low">63.5%</td>
+    <td class="CoverValue branch-coverage coverage-low">94 / 148</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Buffer.hpp.db3477407134d2c2ad153968dcd52d80.html">library/include/public/lib.Buffer.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">60 / 60</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">22 / 22</td>
+    <td class="CoverValue branch-coverage coverage-medium">84.4%</td>
+    <td class="CoverValue branch-coverage coverage-medium">27 / 32</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.CharTrait.hpp.25713d7de440e3dc87486a2cd078ebd9.html">library/include/public/lib.CharTrait.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="96.0" title="96.0%">96.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">96.0%</td>
+    <td class="CoverValue line-coverage coverage-high">24 / 25</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">10 / 10</td>
+    <td class="CoverValue branch-coverage coverage-high">94.1%</td>
+    <td class="CoverValue branch-coverage coverage-high">16 / 17</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.CircularList.hpp.92dcd30764b57f6828b5b99f949fb537.html">library/include/public/lib.CircularList.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="98.2" title="98.2%">98.2</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">98.2%</td>
+    <td class="CoverValue line-coverage coverage-high">111 / 113</td>
+    <td class="CoverValue function-coverage coverage-low">58.1%</td>
+    <td class="CoverValue function-coverage coverage-low">25 / 43</td>
+    <td class="CoverValue branch-coverage coverage-medium">87.5%</td>
+    <td class="CoverValue branch-coverage coverage-medium">56 / 64</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Heap.hpp.3fcbcb745e0004ec4f84e1638604b609.html">library/include/public/lib.Heap.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-medium" min="0" max="100" value="89.2" title="89.2%">89.2</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-medium">89.2%</td>
+    <td class="CoverValue line-coverage coverage-medium">165 / 185</td>
+    <td class="CoverValue function-coverage coverage-medium">84.6%</td>
+    <td class="CoverValue function-coverage coverage-medium">22 / 26</td>
+    <td class="CoverValue branch-coverage coverage-medium">76.9%</td>
+    <td class="CoverValue branch-coverage coverage-medium">83 / 108</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.LinkedList.hpp.170cfb706c442913b97db9b053e099c9.html">library/include/public/lib.LinkedList.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="98.2" title="98.2%">98.2</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">98.2%</td>
+    <td class="CoverValue line-coverage coverage-high">112 / 114</td>
+    <td class="CoverValue function-coverage coverage-low">42.2%</td>
+    <td class="CoverValue function-coverage coverage-low">27 / 64</td>
+    <td class="CoverValue branch-coverage coverage-medium">80.8%</td>
+    <td class="CoverValue branch-coverage coverage-medium">59 / 73</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.LinkedNode.hpp.15ddcc49f4581c18cc3c8e6ae43fe2df.html">library/include/public/lib.LinkedNode.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">44 / 44</td>
+    <td class="CoverValue function-coverage coverage-low">59.3%</td>
+    <td class="CoverValue function-coverage coverage-low">16 / 27</td>
+    <td class="CoverValue branch-coverage coverage-medium">87.5%</td>
+    <td class="CoverValue branch-coverage coverage-medium">7 / 8</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Memory.hpp.4917167d2d73388feebdddefbfdae8f2.html">library/include/public/lib.Memory.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">168 / 168</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">26 / 26</td>
+    <td class="CoverValue branch-coverage coverage-high">93.5%</td>
+    <td class="CoverValue branch-coverage coverage-high">116 / 124</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Mutex.hpp.468c81a9a61a9972febf59c610c2dfb9.html">library/include/public/lib.Mutex.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="93.8" title="93.8%">93.8</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">93.8%</td>
+    <td class="CoverValue line-coverage coverage-high">30 / 32</td>
+    <td class="CoverValue function-coverage coverage-low">53.8%</td>
+    <td class="CoverValue function-coverage coverage-low">7 / 13</td>
+    <td class="CoverValue branch-coverage coverage-low">50.0%</td>
+    <td class="CoverValue branch-coverage coverage-low">6 / 12</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.MutexGuard.hpp.42b151f380c5b8dc09f82710f676b934.html">library/include/public/lib.MutexGuard.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="93.8" title="93.8%">93.8</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">93.8%</td>
+    <td class="CoverValue line-coverage coverage-high">15 / 16</td>
+    <td class="CoverValue function-coverage coverage-medium">75.0%</td>
+    <td class="CoverValue function-coverage coverage-medium">6 / 8</td>
+    <td class="CoverValue branch-coverage coverage-medium">75.0%</td>
+    <td class="CoverValue branch-coverage coverage-medium">6 / 8</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.NonCopyable.hpp.4c53bb35bd992244b38016d9a1a68e97.html">library/include/public/lib.NonCopyable.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">4 / 4</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">6 / 6</td>
+    <td class="CoverValue branch-coverage coverage-none">0.0%</td>
+    <td class="CoverValue branch-coverage coverage-none">0 / 2</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Object.hpp.7714bc752f65f07d8713dee47c7e1857.html">library/include/public/lib.Object.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">33 / 33</td>
+    <td class="CoverValue function-coverage coverage-high">90.0%</td>
+    <td class="CoverValue function-coverage coverage-high">18 / 20</td>
+    <td class="CoverValue branch-coverage coverage-low">66.7%</td>
+    <td class="CoverValue branch-coverage coverage-low">12 / 18</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.ObjectAllocator.hpp.aae0a6365740606ef0d4403a210631bb.html">library/include/public/lib.ObjectAllocator.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">9 / 9</td>
+    <td class="CoverValue function-coverage coverage-medium">77.8%</td>
+    <td class="CoverValue function-coverage coverage-medium">7 / 9</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Semaphore.hpp.b85fb0b93b616540a694049481e0cd94.html">library/include/public/lib.Semaphore.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">24 / 24</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">6 / 6</td>
+    <td class="CoverValue branch-coverage coverage-low">58.3%</td>
+    <td class="CoverValue branch-coverage coverage-low">7 / 12</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.SharedPointer.hpp.5fb8340be1bc84f55a7140ef46a8b65c.html">library/include/public/lib.SharedPointer.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="93.8" title="93.8%">93.8</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">93.8%</td>
+    <td class="CoverValue line-coverage coverage-high">121 / 129</td>
+    <td class="CoverValue function-coverage coverage-low">70.7%</td>
+    <td class="CoverValue function-coverage coverage-low">53 / 75</td>
+    <td class="CoverValue branch-coverage coverage-low">65.7%</td>
+    <td class="CoverValue branch-coverage coverage-low">46 / 70</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.SmartPointerDeleter.hpp.317e7bc9fce141dd2c4811dfdc68e432.html">library/include/public/lib.SmartPointerDeleter.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">6 / 6</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">5 / 5</td>
+    <td class="CoverValue branch-coverage coverage-medium">75.0%</td>
+    <td class="CoverValue branch-coverage coverage-medium">3 / 4</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Stream.hpp.5187acab6ffaca2fa5f8de66d918d413.html">library/include/public/lib.Stream.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">4 / 4</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Thread.hpp.e422f0811f7df3d53b19e57b1f05ef85.html">library/include/public/lib.Thread.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">53 / 53</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">13 / 13</td>
+    <td class="CoverValue branch-coverage coverage-medium">77.3%</td>
+    <td class="CoverValue branch-coverage coverage-medium">34 / 44</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.Types.hpp.208918b9f6b144fc93b86d6e27ae7a34.html">library/include/public/lib.Types.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue function-coverage coverage-unknown">-%</td>
+    <td class="CoverValue function-coverage coverage-unknown">0 / 0</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.lib.UniquePointer.hpp.860a677fcd0cae457cf1194051f2b7d2.html">library/include/public/lib.UniquePointer.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="97.6" title="97.6%">97.6</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">97.6%</td>
+    <td class="CoverValue line-coverage coverage-high">83 / 85</td>
+    <td class="CoverValue function-coverage coverage-medium">80.3%</td>
+    <td class="CoverValue function-coverage coverage-medium">61 / 76</td>
+    <td class="CoverValue branch-coverage coverage-low">68.4%</td>
+    <td class="CoverValue branch-coverage coverage-low">26 / 38</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Configuration.hpp.067b0407eb25801af189033e00a16227.html">system/include/private/sys.Configuration.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">4 / 4</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Heap.hpp.2b8bff5eab9958f8f995f6263e2b9c29.html">system/include/private/sys.Heap.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="95.5" title="95.5%">95.5</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">95.5%</td>
+    <td class="CoverValue line-coverage coverage-high">21 / 22</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">6 / 6</td>
+    <td class="CoverValue branch-coverage coverage-low">66.7%</td>
+    <td class="CoverValue branch-coverage coverage-low">4 / 6</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Mutex.hpp.04157674356d4d40985f347a3010a8ca.html">system/include/private/sys.Mutex.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="92.7" title="92.7%">92.7</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">92.7%</td>
+    <td class="CoverValue line-coverage coverage-high">38 / 41</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">8 / 8</td>
+    <td class="CoverValue branch-coverage coverage-low">52.9%</td>
+    <td class="CoverValue branch-coverage coverage-low">9 / 17</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.NonCopyable.hpp.da5d704032098cc29cdaaad7096ce5b8.html">system/include/private/sys.NonCopyable.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">4 / 4</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-low">50.0%</td>
+    <td class="CoverValue branch-coverage coverage-low">1 / 2</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Object.hpp.a52429ef8299ece093ff9df002ddedf8.html">system/include/private/sys.Object.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">4 / 4</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue branch-coverage coverage-low">50.0%</td>
+    <td class="CoverValue branch-coverage coverage-low">1 / 2</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.OutStreamChar.hpp.9bc46ae5bf3f8303dfda9ed9af2694c5.html">system/include/private/sys.OutStreamChar.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="96.3" title="96.3%">96.3</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">96.3%</td>
+    <td class="CoverValue line-coverage coverage-high">26 / 27</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">6 / 6</td>
+    <td class="CoverValue branch-coverage coverage-low">60.0%</td>
+    <td class="CoverValue branch-coverage coverage-low">6 / 10</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Semaphore.hpp.6c40af89979819d19bcc018ee750ab1d.html">system/include/private/sys.Semaphore.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="93.8" title="93.8%">93.8</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">93.8%</td>
+    <td class="CoverValue line-coverage coverage-high">45 / 48</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">9 / 9</td>
+    <td class="CoverValue branch-coverage coverage-low">56.5%</td>
+    <td class="CoverValue branch-coverage coverage-low">13 / 23</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Thread.hpp.a7bd0216cfe25c4a636384c5199ba731.html">system/include/private/sys.Thread.hpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="90.2" title="90.2%">90.2</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">90.2%</td>
+    <td class="CoverValue line-coverage coverage-high">83 / 92</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">11 / 11</td>
+    <td class="CoverValue branch-coverage coverage-low">63.1%</td>
+    <td class="CoverValue branch-coverage coverage-low">41 / 65</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Call.cpp.a53bb16e73a42618859aa3b249403466.html">system/source/sys.Call.cpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="100.0" title="100.0%">100.0</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">100.0%</td>
+    <td class="CoverValue line-coverage coverage-high">2 / 2</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">1 / 1</td>
+    <td class="CoverValue branch-coverage coverage-unknown">-%</td>
+    <td class="CoverValue branch-coverage coverage-unknown">0 / 0</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.Scheduler.cpp.487235dfd72e7b6b6bd65becd631422a.html">system/source/sys.Scheduler.cpp</a>
+    </th>
+    <td>
+      <meter class="coverage-high" min="0" max="100" value="97.7" title="97.7%">97.7</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-high">97.7%</td>
+    <td class="CoverValue line-coverage coverage-high">42 / 43</td>
+    <td class="CoverValue function-coverage coverage-high">100.0%</td>
+    <td class="CoverValue function-coverage coverage-high">8 / 8</td>
+    <td class="CoverValue branch-coverage coverage-low">57.5%</td>
+    <td class="CoverValue branch-coverage coverage-low">23 / 40</td>
+  </tr>
+
+
+  <tr>
+    <th scope="row">
+      <a href="index.sys.System.cpp.7bd331cecaba085c0ac7fd0e0229100a.html">system/source/sys.System.cpp</a>
+    </th>
+    <td>
+      <meter class="coverage-medium" min="0" max="100" value="85.1" title="85.1%">85.1</meter>
+    </td>
+    <td class="CoverValue line-coverage coverage-medium">85.1%</td>
+    <td class="CoverValue line-coverage coverage-medium">80 / 94</td>
+    <td class="CoverValue function-coverage coverage-high">92.9%</td>
+    <td class="CoverValue function-coverage coverage-high">13 / 14</td>
+    <td class="CoverValue branch-coverage coverage-low">56.0%</td>
+    <td class="CoverValue branch-coverage coverage-low">65 / 116</td>
+  </tr>
+
+</table>
+      <hr/>
+    </main>
+
+    <footer>
+      Generated by: <a href="http://gcovr.com">GCOVR (Version 5.2)</a>
+    </footer>
+  </body>
 </html>
-
