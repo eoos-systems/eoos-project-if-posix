@@ -88,109 +88,64 @@ $ g++ --version
 g++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0
 ```
 
-###### 1.1.4. Install Doxygen for future documentation creation
+###### 1.1.4. Install [Python 3.10 or higher](https://www.python.org/downloads/) for automation
+
+Check your version is not 3.10
 
 ```
-$ sudo apt-get install doxygen
-
-$ doxygen -v
-1.8.13
-```
-
-###### 1.1.5. Install Graphviz for future documentation creation
-
-```
-$ sudo apt-get install graphviz
-
-$ dot -version
-dot - graphviz version 2.40.1 (20161225.0304)
-```
-
-###### 1.1.6. Install [Python 3.7 or higher](https://www.python.org/downloads/) for automation
-
-Check your version is not 3.7
-
-```
-$ python3 -V
+$ python3 --version
 Python 3.6.9
 ```
  
-Install version 3.7
+Install version 3.10
 
 ```
-$ sudo apt-get install python3.7
+$ sudo apt-get install python3.10
 ```
  
 Update Python alternatives
 
 ```
 $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
-$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
+$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 2
 ```
  
-Configure vession 3.7 as default
+Configure vession 3.10 as default
 
 ```
 $ sudo update-alternatives --config python3
 ``` 
 
-Check your version is 3.7
+Check your version is 3.10
 
 ```
-$ python3 -V
-Python 3.7.5
+$ python3 --version
+Python 3.10.6
 ```
 
-###### 1.1.7. Install Pip for Python 3.7 for automation
+###### 1.1.5. Install Pip for Python 3.10 for automation
 
 ```
 $ sudo apt-get update
 $ sudo apt-get -y install python3-pip
 $ pip3 --version
-pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.7)
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
 ```
 
-###### 1.1.8. Install Pip for Python 2.7 for automation
-
-Check your version is 2.7 for Ubuntu 18.04 LTS by default
-
-```
-$ python --version
-Python 2.7.17
-```
-
-Install Pip
-
-```
-$ sudo apt-get update
-$ sudo apt-get -y install python-pip
-$ pip --version
-pip 9.0.1 from /usr/lib/python2.7/dist-packages (python 2.7)
-```
-
-###### 1.1.9. Install GCOVR and LCOV for unit tests reports generation
+###### 1.1.6. Install GCOVR and LCOV for unit tests reports generation
 
 Install GCOVR
 
 ```
 $ pip install gcovr
 $ gcovr --version
-gcovr 4.2
+gcovr 5.2
 ```
-
-Install LCOV
-
-```
-$ sudo apt-get install lcov
-$ lcov --version
-lcov: LCOV version 1.13
-```
-
 
 
 #### 1.2. Obtain Git Repository
 
-###### 1.2.1. Create an empty directory somewhere on your disk. 
+###### 1.2.1. Create an empty directory somewhere on your disk
 
 For instance we will create *~/REPOSITORY*.
 
@@ -200,7 +155,7 @@ For instance we will create *~/REPOSITORY*.
 ~/REPOSITORY$
 ```
 
-###### 1.2.2. Clone this repository. 
+###### 1.2.2. Clone this repository
 
 For instance we will clone it to *EOOS* directory by SSH.
 
@@ -224,35 +179,33 @@ For instance we will clone it to *EOOS* directory by SSH.
 
 #### 1.3. Source Code Build and Installation
 
+EOOS can be executed on various systems. To standardize the building process, we put most common steps 
+under the hood of the `Make.py` cross-platform script that is located in `scripts/python` directory.
+
 ###### 1.3.1. Build and Installation for Developing on EOOS
 
-To build and install EOOS on Linux, execute the commads below.
-
 ```
-~/REPOSITORY/EOOS$ mkdir build
-~/REPOSITORY/EOOS$ cd build
-~/REPOSITORY/EOOS/build$ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-~/REPOSITORY/EOOS/build$ sudo make -j16 install
+~/REPOSITORY/EOOS$ cd scripts/python
+~/REPOSITORY/EOOS/scripts/python$ python3 Make.py --clean --build EOOS --install --config RelWithDebInfo
 ```
 
-None that the *CMAKE_BUILD_TYPE* parameters can be one of *Release*, *Debug*, *RelWithDebInfo*, *MinSizeRel*, but for developing
+None that the *--config* parameter can be one of *Release*, *Debug*, *RelWithDebInfo*, *MinSizeRel*, but for developing
 purpose we recommend to pass *RelWithDebInfo*.
 
-Having done all the steps, EOOS will be installed to the */usr/local/lib* and */usr/local/include* directories, and 
-you will be able to find EOOS in by using `find_package()` command in your CMake project.
+Having done all the steps, EOOS will be installed to the *C:\Program Files (x86)* directory, and you will be able 
+to find EOOS in by using `find_package()` command in your CMake project.
 
 An example of your root *CMakeLists.txt* may be the next:
 
 ```
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10)
 project(eoos-application VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-find_package(Threads REQUIRED)
-find_package(EOOS 0.9.0 REQUIRED)
+find_package(EOOS 0.11.0 REQUIRED)
 
 add_executable(application)
 
@@ -263,7 +216,6 @@ PRIVATE
 
 target_link_libraries(application
 PRIVATE
-    Threads::Threads
     eoos::main
 )
 
@@ -272,7 +224,7 @@ set_target_properties(application PROPERTIES
 )
 ```
 
-Thus, you will build *EoosApplication* executable file.
+Thus, you will build *EoosApplication.exe* executable file.
 
 > For more examples and fast start please see 
 > the [EOOS Automotive Sample Applications](https://gitflic.ru/project/baigudin-software/eoos-project-sample-applications) repository
@@ -281,27 +233,9 @@ Thus, you will build *EoosApplication* executable file.
 
 This chapter must be useful for EOOS developers and CI/CD engineers, but not prohibited to be used by any other for sure.
 
-**Note:** Before building, if *build* directory exists, you can remove it by executing the command below.
+To build the project with Unit Tests and run them, you have to execute the commands below.
 
 ```
-~/REPOSITORY/EOOS$ rm -rf build
+~REPOSITORY/EOOS$ cd scripts/python
+~REPOSITORY/EOOS/scripts/python$ python3 Make.py --clean --build ALL --run --config RelWithDebInfo
 ```
-
-To build the project with Unit Tests you have to execute the commands below.
-
-```
-~/REPOSITORY/EOOS$ mkdir build
-~/REPOSITORY/EOOS$ cd build
-~/REPOSITORY/EOOS/build$ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DEOOS_ENABLE_TESTS=ON ..
-~/REPOSITORY/EOOS/build$ make -j16 all
-```
-
-To execute the Unit Tests run the commands below.
-
-```
-~/REPOSITORY/EOOS/build$ ./codebase/tests/EoosTests --gtest_shuffle
-```
-
-> On developing and intergation stages the *CMAKE_BUILD_TYPE* parameter must be checked for all the 
-> *Release*, *Debug*, *RelWithDebInfo*, *MinSizeRel* configurations.
-
