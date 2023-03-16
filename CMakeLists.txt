@@ -1,7 +1,7 @@
 # EOOS POSIX.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2019-2022, Sergey Baigudin, Baigudin Software
+# @copyright 2019-2023, Sergey Baigudin, Baigudin Software
 
 cmake_minimum_required(VERSION 3.10)
 project(eoos-if-posix VERSION 0.11.0 LANGUAGES CXX)
@@ -35,7 +35,8 @@ setup_target_for_coverage_gcovr_html(
     NAME coverage
     EXECUTABLE ctest
     DEPENDENCIES target-eoos-unit-tests
-    EXCLUDE "${PROJECT_SOURCE_DIR}/extern/*" 
+    EXCLUDE "${PROJECT_SOURCE_DIR}/build/*"
+            "${PROJECT_SOURCE_DIR}/extern/*" 
             "${PROJECT_SOURCE_DIR}/codebase/tests/*" 
             "${PROJECT_SOURCE_DIR}/codebase/system/source/sys.Main.cpp"
 )
