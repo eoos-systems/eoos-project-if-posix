@@ -132,7 +132,7 @@ $ pip3 --version
 pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.7)
 ```
 
-###### 1.1.6. Install GCOVR and LCOV for unit tests reports generation
+###### 1.1.6. Install GCOVR for unit tests reports generation
 
 Install GCOVR
 
