@@ -1,14 +1,38 @@
 # EOOS.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2019-2022, Sergey Baigudin, Baigudin Software
+# @copyright 2019-2023, Sergey Baigudin, Baigudin Software
 
-add_library(target-eoos STATIC)
+add_library(target-eoos STATIC
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Call.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Main.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Scheduler.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.System.cpp"
+)
 
-add_subdirectory(interface)
-add_subdirectory(library)
-add_subdirectory(system)
-if(EOOS_ENABLE_TESTS)
+target_include_directories(target-eoos
+PUBLIC
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/interface/include/public>"
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/library/include/public>"
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/system/include/public>"
+PRIVATE
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/system/include/private>"
+)
+
+if(EOOS_GLOBAL_ENABLE_NO_HEAP)
+    target_compile_definitions(target-eoos
+    PUBLIC
+        "EOOS_GLOBAL_ENABLE_NO_HEAP"
+    )
+endif()
+
+
+if(EOOS_CMAKE_ENABLE_TESTS)
+    target_include_directories(target-eoos
+    PUBLIC
+        "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/system/include/private>"
+    )
+    
     add_subdirectory(tests)
 endif()
 
