@@ -57,7 +57,7 @@ CMake minimum required version 3.10 for EOOS project.
 Download and install CMake from the web-site. Check CMake version in Terminal.
 
 ```
-C:\> cmake --version
+$ cmake --version
 cmake version 3.10.6
 ```
 
