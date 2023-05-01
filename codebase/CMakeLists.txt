@@ -6,7 +6,6 @@
 add_library(target-eoos STATIC
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Call.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Main.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Scheduler.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.System.cpp"
 )
 
