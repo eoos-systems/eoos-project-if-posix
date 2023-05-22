@@ -5,9 +5,17 @@
 
 add_library(target-eoos STATIC
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Call.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Heap.cpp"    
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Main.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.MemoryManager.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.MutexAllocator.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.MutexManager.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.NoAllocator.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.OutStream.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Scheduler.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.SemaphoreAllocator.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.SemaphoreManager.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.StreamManager.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.System.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.ThreadAllocator.cpp"
 )
