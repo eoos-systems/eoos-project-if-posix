@@ -6,7 +6,10 @@
 add_library(target-eoos STATIC
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Call.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Main.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.MutexAllocator.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.SemaphoreAllocator.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.System.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.ThreadAllocator.cpp"
 )
 
 target_include_directories(target-eoos
@@ -25,6 +28,12 @@ if(EOOS_GLOBAL_ENABLE_NO_HEAP)
     )
 endif()
 
+target_compile_definitions(target-eoos
+PUBLIC
+    "EOOS_GLOBAL_NUMBER_OF_MUTEXS=${EOOS_GLOBAL_NUMBER_OF_MUTEXS}"
+    "EOOS_GLOBAL_NUMBER_OF_SEMAPHORES=${EOOS_GLOBAL_NUMBER_OF_SEMAPHORES}"
+    "EOOS_GLOBAL_NUMBER_OF_THREADS=${EOOS_GLOBAL_NUMBER_OF_THREADS}"    
+)
 
 if(EOOS_CMAKE_ENABLE_TESTS)
     target_include_directories(target-eoos
