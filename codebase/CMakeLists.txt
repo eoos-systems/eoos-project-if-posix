@@ -48,7 +48,6 @@ if(EOOS_CMAKE_ENABLE_TESTS)
     PUBLIC
         "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/system/include/private>"
     )
-    
     add_subdirectory(tests)
 endif()
 
