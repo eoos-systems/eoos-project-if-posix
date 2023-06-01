@@ -30,10 +30,6 @@ set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# >>> TOREMOVE
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g" CACHE STRING "" FORCE)
-# <<<
-
 add_compile_options(-Wall)
 
 add_subdirectory(extern)
