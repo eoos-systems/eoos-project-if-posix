@@ -192,7 +192,7 @@ under the hood of the `Make.py` cross-platform script that is located in `script
 None that the *--config* parameter can be one of *Release*, *Debug*, *RelWithDebInfo*, *MinSizeRel*, but for developing
 purpose we recommend to pass *RelWithDebInfo*.
 
-Having done all the steps, EOOS will be installed to the *C:\Program Files (x86)* directory, and you will be able 
+Having done all the steps, EOOS will be installed to the */usr/local* directory, and you will be able 
 to find EOOS in by using `find_package()` command in your CMake project.
 
 An example of your root *CMakeLists.txt* may be the next:
