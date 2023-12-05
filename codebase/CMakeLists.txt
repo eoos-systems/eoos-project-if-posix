@@ -8,7 +8,6 @@ add_library(target-eoos STATIC
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Heap.cpp"    
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Main.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.MutexManager.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.NoAllocator.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.OutStream.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Scheduler.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.SemaphoreManager.cpp"

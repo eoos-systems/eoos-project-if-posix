@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-03-16 04:37:09</td>
+      <td>2023-12-05 18:56:11</td>
     </tr>
   </table>
 </div>
@@ -47,15 +47,15 @@
     </tr>
     <tr>
       <th scope="row">Functions:</th>
-      <td>2</td>
-      <td>2</td>
+      <td>8</td>
+      <td>8</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>1</td>
-      <td>2</td>
-      <td class="coverage-low">50.0%</td>
+      <td>0</td>
+      <td>0</td>
+      <td class="coverage-unknown">-%</td>
     </tr>
   </table>
 </div>
@@ -75,24 +75,90 @@
     </tr>
     <tr>
       <td>
-        <a href="#l30">eoos::sys::Object::Object()</a>
+        <a href="#l67">eoos::sys::Object&lt;eoos::sys::MutexManager&gt;::Object()</a>
       </td>
       <td>
-        <a href="#l30">30</a>
+        <a href="#l67">67</a>
       </td>
       <td>
-        <a href="#l30"> called 1022 times</a>
+        <a href="#l67"> called 66 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l37">eoos::sys::Object::~Object()</a>
+        <a href="#l72">eoos::sys::Object&lt;eoos::sys::MutexManager&gt;::~Object()</a>
       </td>
       <td>
-        <a href="#l37">37</a>
+        <a href="#l72">72</a>
       </td>
       <td>
-        <a href="#l37"> called 1021 times</a>
+        <a href="#l72"> called 65 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l67">eoos::sys::Object&lt;eoos::sys::NoAllocator&gt;::Object()</a>
+      </td>
+      <td>
+        <a href="#l67">67</a>
+      </td>
+      <td>
+        <a href="#l67"> called 1970 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l72">eoos::sys::Object&lt;eoos::sys::NoAllocator&gt;::~Object()</a>
+      </td>
+      <td>
+        <a href="#l72">72</a>
+      </td>
+      <td>
+        <a href="#l72"> called 1970 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l67">eoos::sys::Object&lt;eoos::sys::Scheduler&gt;::Object()</a>
+      </td>
+      <td>
+        <a href="#l67">67</a>
+      </td>
+      <td>
+        <a href="#l67"> called 33 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l72">eoos::sys::Object&lt;eoos::sys::Scheduler&gt;::~Object()</a>
+      </td>
+      <td>
+        <a href="#l72">72</a>
+      </td>
+      <td>
+        <a href="#l72"> called 33 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l67">eoos::sys::Object&lt;eoos::sys::SemaphoreManager&gt;::Object()</a>
+      </td>
+      <td>
+        <a href="#l67">67</a>
+      </td>
+      <td>
+        <a href="#l67"> called 8 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l72">eoos::sys::Object&lt;eoos::sys::SemaphoreManager&gt;::~Object()</a>
+      </td>
+      <td>
+        <a href="#l72">72</a>
+      </td>
+      <td>
+        <a href="#l72"> called 8 times</a>
       </td>
     </tr>
   </table>
@@ -139,7 +205,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @copyright 2014-2022, Sergey Baigudin, Baigudin Software</span></td>
+      <td class="src "><span class="cm"> * @copyright 2014-2023, Sergey Baigudin, Baigudin Software</span></td>
     </tr>
 
     <tr class="source-line">
@@ -187,7 +253,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sys.Types.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sys.NoAllocator.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -267,7 +333,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span><span class="w"></span></td>
+      <td class="src "><span class="cm"> *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -275,7 +341,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">Object</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;&gt;</span><span class="w"></span></td>
+      <td class="src "><span class="cm"> * @tparam A Heap memory allocator class.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -283,7 +349,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="cm"> */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -291,7 +357,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">Parent</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -299,7 +365,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">Object</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -307,7 +373,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -315,7 +381,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Parent</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -323,7 +389,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -331,7 +397,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Constructor.</span></td>
+      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -339,31 +405,31 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1022</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">Object</span><span class="p">()</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1022</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     * @brief Constructor.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l32" href="#l32">32</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1022</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -371,7 +437,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="p">();</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -379,7 +445,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -387,7 +453,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -395,22 +461,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l37" href="#l37">37</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 1021 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">2042</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">Object</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -418,7 +477,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">Object</span><span class="p">();</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -426,7 +485,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -434,7 +493,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @copydoc eoos::Object::Object(const Object&amp;)</span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -442,7 +501,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * @copydoc eoos::Object::Object(const Object&amp;)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -450,7 +509,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -458,7 +517,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -466,7 +525,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"> </span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -474,7 +533,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -482,7 +541,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="cm">     * @copydoc eoos::Object::operator=(const Object&amp;)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -490,7 +549,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @copydoc eoos::Object::operator=(const Object&amp;)</span></td>
+      <td class="src "><span class="cm">     */</span><span class="w">       </span></td>
     </tr>
 
     <tr class="source-line">
@@ -498,7 +557,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w">       </span></td>
+      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -506,7 +565,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -514,7 +573,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="cp">#if EOOS_CPP_STANDARD &gt;= 2011</span></td>
     </tr>
 
     <tr class="source-line">
@@ -522,7 +581,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">Parent</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -530,7 +589,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -538,7 +597,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w">    </span></td>
+      <td class="src "><span class="cm">     * @copydoc eoos::Object::Object(const Object&amp;&amp;)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -546,7 +605,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     */</span><span class="w">       </span></td>
     </tr>
 
     <tr class="source-line">
@@ -554,7 +613,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cp">#if EOOS_CPP_STANDARD &gt;= 2011</span></td>
+      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -562,7 +621,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -578,7 +637,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @copydoc eoos::Object::Object(const Object&amp;&amp;)</span></td>
+      <td class="src "><span class="cm">     * @copydoc eoos::Object::operator=(const Object&amp;&amp;)</span></td>
     </tr>
 
     <tr class="source-line">
@@ -586,7 +645,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w">       </span></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -594,7 +653,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span></td>
+      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -602,7 +661,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -610,7 +669,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="cp">#endif </span><span class="c1">// EOOS_CPP_STANDARD &gt;= 2011    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -618,7 +677,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -626,7 +685,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="p">};</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -634,7 +693,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @copydoc eoos::Object::operator=(const Object&amp;&amp;)</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -642,31 +701,31 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2184</td>
+      <td class="src coveredLine"><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="n">Object</span><span class="p">()</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l68" href="#l68">68</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2184</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l69" href="#l69">69</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="n">Parent</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span></td>
+      <td class="linecount coveredLine">2184</td>
+      <td class="src coveredLine"><span class="p">}</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -674,7 +733,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -682,15 +741,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l72" href="#l72">72</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span></td>
+      <td class="linecount coveredLine">4152</td>
+      <td class="src coveredLine"><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::~</span><span class="n">Object</span><span class="p">()</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -698,7 +757,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cp">#endif </span><span class="c1">// EOOS_CPP_STANDARD &gt;= 2011    </span></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -706,7 +765,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">}</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -714,7 +773,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -722,7 +781,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -730,7 +789,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace sys</span></td>
+      <td class="src "><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="n">Object</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span></td>
     </tr>
 
     <tr class="source-line">
@@ -738,7 +797,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+      <td class="src "><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -746,11 +805,235 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif </span><span class="c1">// SYS_OBJECT_HPP_</span></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l80" href="#l80">80</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l81" href="#l81">81</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l82" href="#l82">82</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Object</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l83" href="#l83">83</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l84" href="#l84">84</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">Parent</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l85" href="#l85">85</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l86" href="#l86">86</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l87" href="#l87">87</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l88" href="#l88">88</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#if EOOS_CPP_STANDARD &gt;= 2011</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l89" href="#l89">89</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l90" href="#l90">90</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l91" href="#l91">91</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="n">Object</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l92" href="#l92">92</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l93" href="#l93">93</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l94" href="#l94">94</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l95" href="#l95">95</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l96" href="#l96">96</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Object</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">noexcept</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l97" href="#l97">97</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l98" href="#l98">98</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="n">Parent</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="w"> </span><span class="n">lib</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l99" href="#l99">99</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l100" href="#l100">100</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l101" href="#l101">101</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l102" href="#l102">102</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#endif </span><span class="c1">// EOOS_CPP_STANDARD &gt;= 2011    </span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l103" href="#l103">103</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l104" href="#l104">104</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l105" href="#l105">105</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace sys</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l106" href="#l106">106</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l107" href="#l107">107</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#endif </span><span class="c1">// SYS_OBJECT_HPP_</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l108" href="#l108">108</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>

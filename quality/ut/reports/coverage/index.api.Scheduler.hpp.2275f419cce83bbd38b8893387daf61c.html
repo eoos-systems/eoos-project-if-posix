@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-03-16 04:37:09</td>
+      <td>2023-12-05 18:56:11</td>
     </tr>
   </table>
 </div>
@@ -75,13 +75,13 @@
     </tr>
     <tr>
       <td>
-        <a href="#l55">eoos::api::Scheduler::~Scheduler()</a>
+        <a href="#l57">eoos::api::Scheduler::~Scheduler()</a>
       </td>
       <td>
-        <a href="#l55">55</a>
+        <a href="#l57">57</a>
       </td>
       <td>
-        <a href="#l55"> called 184 times</a>
+        <a href="#l57"> called 197 times</a>
       </td>
     </tr>
   </table>
@@ -448,7 +448,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return true if thread slept requested time.</span></td>
+      <td class="src "><span class="cm">     * @return True if thread slept requested time.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -496,7 +496,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * </span></td>
     </tr>
 
     <tr class="source-line">
@@ -504,7 +504,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">yield</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * @return True if thread is yielded.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -512,7 +512,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -520,7 +520,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">bool_t</span><span class="w"> </span><span class="nf">yield</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -535,8 +535,8 @@
       <td class="lineno"><a id="l55" href="#l55">55</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">368</td>
-      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">::~</span><span class="n">Scheduler</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">};</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -551,8 +551,8 @@
       <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace api</span></td>
+      <td class="linecount coveredLine">394</td>
+      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">::~</span><span class="n">Scheduler</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -560,7 +560,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -568,11 +568,27 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif </span><span class="c1">// API_SCHEDULER_HPP_</span></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace api</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l60" href="#l60">60</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l61" href="#l61">61</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#endif </span><span class="c1">// API_SCHEDULER_HPP_</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l62" href="#l62">62</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>

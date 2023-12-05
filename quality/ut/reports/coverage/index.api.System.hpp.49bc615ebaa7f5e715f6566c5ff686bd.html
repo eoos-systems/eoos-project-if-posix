@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-03-16 04:37:09</td>
+      <td>2023-12-05 18:56:11</td>
     </tr>
   </table>
 </div>
@@ -75,13 +75,13 @@
     </tr>
     <tr>
       <td>
-        <a href="#l82">eoos::api::System::~System()</a>
+        <a href="#l74">eoos::api::System::~System()</a>
       </td>
       <td>
-        <a href="#l82">82</a>
+        <a href="#l74">74</a>
       </td>
       <td>
-        <a href="#l82"> called 184 times</a>
+        <a href="#l74"> called 197 times</a>
       </td>
     </tr>
   </table>
@@ -128,7 +128,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @copyright 2017-2022, Sergey Baigudin, Baigudin Software</span></td>
+      <td class="src "><span class="cm"> * @copyright 2017-2023, Sergey Baigudin, Baigudin Software</span></td>
     </tr>
 
     <tr class="source-line">
@@ -192,7 +192,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.Mutex.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.MutexManager.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -200,7 +200,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.Semaphore.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.SemaphoreManager.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -208,7 +208,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.OutStream.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.StreamManager.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -344,7 +344,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Returns the system scheduler.</span></td>
+      <td class="src "><span class="cm">     * @brief Returns the system heap memory.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -360,7 +360,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return The system scheduler.</span></td>
+      <td class="src "><span class="cm">     * @return The system heap memory.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -376,7 +376,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">getScheduler</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">Heap</span><span class="o">&amp;</span><span class="w"> </span><span class="n">getHeap</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -400,7 +400,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Returns the system heap memory.</span></td>
+      <td class="src "><span class="cm">     * @brief Returns the system scheduler.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -416,7 +416,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return The system heap memory.</span></td>
+      <td class="src "><span class="cm">     * @return The system scheduler.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -432,7 +432,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">Heap</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">getHeap</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">getScheduler</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -456,7 +456,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Returns system output character stream.</span></td>
+      <td class="src "><span class="cm">     * @brief Returns mutex sub-system.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -472,7 +472,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return The system output character stream.</span></td>
+      <td class="src "><span class="cm">     * @return The mutex sub-system.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -488,7 +488,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">OutStream</span><span class="o">&lt;</span><span class="n">char_t</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">getOutStreamChar</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">MutexManager</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">getMutexManager</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -512,7 +512,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Returns system error output character stream.</span></td>
+      <td class="src "><span class="cm">     * @brief Returns semaphore sub-system.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -528,7 +528,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return The system error output character stream.</span></td>
+      <td class="src "><span class="cm">     * @return The semaphore sub-system.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -544,7 +544,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">OutStream</span><span class="o">&lt;</span><span class="n">char_t</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">getErrorStreamChar</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">SemaphoreManager</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">getSemaphoreManager</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -568,7 +568,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Creates a new mutex resource.</span></td>
+      <td class="src "><span class="cm">     * @brief Returns stream sub-system.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -584,7 +584,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return A new mutex resource, or NULLPTR if an error has been occurred.</span></td>
+      <td class="src "><span class="cm">     * @return The stream sub-system.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -600,7 +600,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">Mutex</span><span class="o">*</span><span class="w"> </span><span class="nf">createMutex</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">StreamManager</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">getStreamManager</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -608,7 +608,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -616,7 +616,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="k">protected</span><span class="o">:</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -624,7 +624,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Creates a new semaphore resource.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -632,7 +632,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     *</span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -640,7 +640,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @param permits The initial number of permits available.</span></td>
+      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -648,7 +648,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return A new semaphore resource, or NULLPTR if an error has been occurred.</span></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -656,7 +656,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">System</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -664,7 +664,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">Semaphore</span><span class="o">*</span><span class="w"> </span><span class="nf">createSemaphore</span><span class="p">(</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">permits</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -672,7 +672,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span></td>
+      <td class="src "><span class="p">};</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -680,15 +680,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">protected</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l74" href="#l74">74</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="linecount coveredLine">394</td>
+      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">System</span><span class="o">::~</span><span class="n">System</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -696,7 +696,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -704,7 +704,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace api</span></td>
     </tr>
 
     <tr class="source-line">
@@ -712,7 +712,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
     </tr>
 
     <tr class="source-line">
@@ -720,75 +720,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">System</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l79" href="#l79">79</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l80" href="#l80">80</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">};</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l81" href="#l81">81</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l82" href="#l82">82</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">368</td>
-      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">System</span><span class="o">::~</span><span class="n">System</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l83" href="#l83">83</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l84" href="#l84">84</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace api</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l85" href="#l85">85</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l86" href="#l86">86</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src "><span class="cp">#endif </span><span class="c1">// API_SYSTEM_HPP_</span></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l87" href="#l87">87</a></td>
+      <td class="lineno"><a id="l79" href="#l79">79</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>

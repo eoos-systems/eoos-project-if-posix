@@ -23,7 +23,7 @@
     </tr>
     <tr>
       <th scope="row">File:</th>
-      <td>codebase/interface/include/public/api.SequenceContainer.hpp</td>
+      <td>codebase/interface/include/public/api.MutexManager.hpp</td>
     </tr>
     <tr>
       <th scope="row">Date:</th>
@@ -75,13 +75,13 @@
     </tr>
     <tr>
       <td>
-        <a href="#l49">eoos::api::SequenceContainer&lt;int&gt;::~SequenceContainer()</a>
+        <a href="#l40">eoos::api::MutexManager::~MutexManager()</a>
       </td>
       <td>
-        <a href="#l49">49</a>
+        <a href="#l40">40</a>
       </td>
       <td>
-        <a href="#l49"> called 65 times</a>
+        <a href="#l40"> called 197 times</a>
       </td>
     </tr>
   </table>
@@ -112,7 +112,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @file      api.SequenceContainer.hpp</span></td>
+      <td class="src "><span class="cm"> * @file      api.MutexManager.hpp</span></td>
     </tr>
 
     <tr class="source-line">
@@ -128,7 +128,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @copyright 2022, Sergey Baigudin, Baigudin Software</span></td>
+      <td class="src "><span class="cm"> * @copyright 2023, Sergey Baigudin, Baigudin Software</span></td>
     </tr>
 
     <tr class="source-line">
@@ -144,7 +144,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#ifndef API_SEQUENCECONTAINER_HPP_</span></td>
+      <td class="src "><span class="cp">#ifndef API_MUTEXMANAGER_HPP_</span></td>
     </tr>
 
     <tr class="source-line">
@@ -152,7 +152,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#define API_SEQUENCECONTAINER_HPP_</span></td>
+      <td class="src "><span class="cp">#define API_MUTEXMANAGER_HPP_</span></td>
     </tr>
 
     <tr class="source-line">
@@ -168,7 +168,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.Collection.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.Object.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -176,7 +176,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.Mutex.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -184,7 +184,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span><span class="w"> </span><span class="nn">eoos</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -192,7 +192,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="k">namespace</span><span class="w"> </span><span class="nn">eoos</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -200,7 +200,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span><span class="w"> </span><span class="nn">api</span><span class="w"></span></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -208,7 +208,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="k">namespace</span><span class="w"> </span><span class="nn">api</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -216,7 +216,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -224,7 +224,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">/**</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -232,7 +232,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @class SequenceContainer&lt;T&gt;</span></td>
+      <td class="src "><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -240,7 +240,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @brief Sequence сontainer interface.</span></td>
+      <td class="src "><span class="cm"> * @class MutexManager</span></td>
     </tr>
 
     <tr class="source-line">
@@ -248,7 +248,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> *</span></td>
+      <td class="src "><span class="cm"> * @brief Mutex sub-system manager interface.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -256,7 +256,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @tparam T Data type of string characters.</span></td>
+      <td class="src "><span class="cm"> */</span><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -264,7 +264,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span><span class="w"></span></td>
+      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">MutexManager</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Object</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -272,7 +272,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -280,7 +280,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">SequenceContainer</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -288,7 +288,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -304,7 +304,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -312,7 +312,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -320,7 +320,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -328,7 +328,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">MutexManager</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -336,7 +336,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -344,7 +344,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">SequenceContainer</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -352,7 +352,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     * @brief Creates a new mutex resource.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -360,7 +360,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="cm">     *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -368,7 +368,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Returns pointer to the first element of sequence сontainer.</span></td>
+      <td class="src "><span class="cm">     * @return A new mutex resource, or NULLPTR if an error has been occurred.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -376,7 +376,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     *</span></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -384,7 +384,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @note Be careful, some action with the object might relocate internal buffer</span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">Mutex</span><span class="o">*</span><span class="w"> </span><span class="nf">create</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -392,7 +392,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * that contains elements. By this reason, a returned address will be actual</span></td>
+      <td class="src "><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -400,7 +400,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * until you do not call a non-constant function of this class for an object.</span></td>
+      <td class="src "><span class="p">};</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -408,15 +408,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     *</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l40" href="#l40">40</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @return Address of the first element, or NULLPTR if an error occurred.</span></td>
+      <td class="linecount coveredLine">394</td>
+      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">MutexManager</span><span class="o">::~</span><span class="n">MutexManager</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -424,7 +424,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     *</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -432,7 +432,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @todo Extend this function with constant function declaration as well.     </span></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace api</span></td>
     </tr>
 
     <tr class="source-line">
@@ -440,7 +440,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
     </tr>
 
     <tr class="source-line">
@@ -448,83 +448,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="nf">getData</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="cp">#endif </span><span class="c1">// API_MUTEXMANAGER_HPP_</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l45" href="#l45">45</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l46" href="#l46">46</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">};</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l47" href="#l47">47</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l48" href="#l48">48</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">///&lt; SCA MISRA-C++:2008 Defected Rule 7-3-1</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l49" href="#l49">49</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">130</td>
-      <td class="src coveredLine"><span class="n">SequenceContainer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::~</span><span class="n">SequenceContainer</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l50" href="#l50">50</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">        </span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l51" href="#l51">51</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace api</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l52" href="#l52">52</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l53" href="#l53">53</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif </span><span class="c1">// API_SEQUENCECONTAINER_HPP_</span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l54" href="#l54">54</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>

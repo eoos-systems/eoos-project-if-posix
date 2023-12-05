@@ -23,7 +23,7 @@
     </tr>
     <tr>
       <th scope="row">File:</th>
-      <td>codebase/library/include/public/lib.AbstractTask.hpp</td>
+      <td>codebase/interface/include/public/api.StreamManager.hpp</td>
     </tr>
     <tr>
       <th scope="row">Date:</th>
@@ -41,14 +41,14 @@
     </tr>
     <tr>
       <th scope="row">Lines:</th>
-      <td>8</td>
-      <td>8</td>
+      <td>1</td>
+      <td>1</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Functions:</th>
-      <td>4</td>
-      <td>4</td>
+      <td>1</td>
+      <td>1</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
@@ -75,46 +75,13 @@
     </tr>
     <tr>
       <td>
-        <a href="#l33">eoos::lib::AbstractTask&lt;eoos::lib::Allocator&gt;::AbstractTask()</a>
+        <a href="#l73">eoos::api::StreamManager::~StreamManager()</a>
       </td>
       <td>
-        <a href="#l33">33</a>
+        <a href="#l73">73</a>
       </td>
       <td>
-        <a href="#l33"> called 63 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l59">eoos::lib::AbstractTask&lt;eoos::lib::Allocator&gt;::getStackSize() const</a>
-      </td>
-      <td>
-        <a href="#l59">59</a>
-      </td>
-      <td>
-        <a href="#l59"> called 6 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l51">eoos::lib::AbstractTask&lt;eoos::lib::Allocator&gt;::isConstructed() const</a>
-      </td>
-      <td>
-        <a href="#l51">51</a>
-      </td>
-      <td>
-        <a href="#l51"> called 35 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l41">eoos::lib::AbstractTask&lt;eoos::lib::Allocator&gt;::~AbstractTask()</a>
-      </td>
-      <td>
-        <a href="#l41">41</a>
-      </td>
-      <td>
-        <a href="#l41"> called 63 times</a>
+        <a href="#l73"> called 197 times</a>
       </td>
     </tr>
   </table>
@@ -145,7 +112,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @file      lib.AbstractTask.hpp</span></td>
+      <td class="src "><span class="cm"> * @file      api.StreamManager.hpp</span></td>
     </tr>
 
     <tr class="source-line">
@@ -161,7 +128,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @copyright 2022, Sergey Baigudin, Baigudin Software</span></td>
+      <td class="src "><span class="cm"> * @copyright 2023, Sergey Baigudin, Baigudin Software</span></td>
     </tr>
 
     <tr class="source-line">
@@ -177,7 +144,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#ifndef LIB_ABSTRACTTASK_HPP_</span></td>
+      <td class="src "><span class="cp">#ifndef API_STREAMMANAGER_HPP_</span></td>
     </tr>
 
     <tr class="source-line">
@@ -185,7 +152,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#define LIB_ABSTRACTTASK_HPP_</span></td>
+      <td class="src "><span class="cp">#define API_STREAMMANAGER_HPP_</span></td>
     </tr>
 
     <tr class="source-line">
@@ -201,7 +168,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;lib.NonCopyable.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.Object.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -209,7 +176,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.Task.hpp&quot;</span><span class="cp"></span></td>
+      <td class="src "><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;api.OutStream.hpp&quot;</span><span class="cp"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -241,7 +208,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">namespace</span><span class="w"> </span><span class="nn">lib</span><span class="w"></span></td>
+      <td class="src "><span class="k">namespace</span><span class="w"> </span><span class="nn">api</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -273,7 +240,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @class AbstractTask&lt;A&gt;</span></td>
+      <td class="src "><span class="cm"> * @class StreamManager</span></td>
     </tr>
 
     <tr class="source-line">
@@ -281,7 +248,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @brief Abstract task for the thread class.</span></td>
+      <td class="src "><span class="cm"> * @brief Stream sub-system manager interface.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -289,7 +256,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> *</span></td>
+      <td class="src "><span class="cm"> */</span><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -297,7 +264,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @tparam A Heap memory allocator class. </span></td>
+      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">StreamManager</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Object</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -305,7 +272,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span><span class="w"></span></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -313,7 +280,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Allocator</span><span class="o">&gt;</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -321,7 +288,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">AbstractTask</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">NonCopyable</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">api</span><span class="o">::</span><span class="n">Task</span><span class="w"></span></td>
+      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -329,7 +296,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -337,7 +304,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">NonCopyable</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Parent</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -345,7 +312,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -353,7 +320,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -361,7 +328,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">StreamManager</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -369,7 +336,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -377,7 +344,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Constructor.</span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -385,15 +352,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * @brief Returns system output character stream.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l33" href="#l33">33</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">63</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">AbstractTask</span><span class="p">()</span><span class="w"> </span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -401,23 +368,23 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">NonCopyable</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">()</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * @return The system output character stream.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l35" href="#l35">35</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">63</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">api</span><span class="o">::</span><span class="n">Task</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">63</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">OutStream</span><span class="o">&lt;</span><span class="n">char_t</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">getCout</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -441,7 +408,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Destructor.</span></td>
+      <td class="src "><span class="cm">     * @brief Returns system error output character stream.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -449,15 +416,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     *</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l41" href="#l41">41</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">126</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">AbstractTask</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     * @return The system error output character stream.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -465,7 +432,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -473,7 +440,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">OutStream</span><span class="o">&lt;</span><span class="n">char_t</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">getCerr</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span></td>
     </tr>
 
     <tr class="source-line">
@@ -481,7 +448,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @copydoc eoos::api::Task::start()</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -489,7 +456,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w">        </span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -497,7 +464,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">start</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * @brief Sets a new system output character stream.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -505,7 +472,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     * </span></td>
     </tr>
 
     <tr class="source-line">
@@ -513,7 +480,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="cm">     * @param cout A new stream to set.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -521,7 +488,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @copydoc eoos::api::Object::isConstructed()</span></td>
+      <td class="src "><span class="cm">     * @return True if the system output character stream is set.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -536,8 +503,8 @@
       <td class="lineno"><a id="l51" href="#l51">51</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">35</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">bool_t</span><span class="w"> </span><span class="nf">isConstructed</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">bool_t</span><span class="w"> </span><span class="nf">setCout</span><span class="p">(</span><span class="n">OutStream</span><span class="o">&lt;</span><span class="n">char_t</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">cout</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -545,35 +512,11 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">{</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l53" href="#l53">53</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">35</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Parent</span><span class="o">::</span><span class="n">isConstructed</span><span class="p">();</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l54" href="#l54">54</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
-    </tr>
-
-    <tr class="source-line">
-      <td class="lineno"><a id="l55" href="#l55">55</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
       <td class="src "></td>
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l56" href="#l56">56</a></td>
+      <td class="lineno"><a id="l53" href="#l53">53</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -581,11 +524,35 @@
     </tr>
 
     <tr class="source-line">
+      <td class="lineno"><a id="l54" href="#l54">54</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     * @brief Sets a new system error output character stream.</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l55" href="#l55">55</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     *</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l56" href="#l56">56</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     * @param cerr A new stream to set.</span></td>
+    </tr>
+
+    <tr class="source-line">
       <td class="lineno"><a id="l57" href="#l57">57</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @copydoc eoos::api::Task::getStackSize()</span></td>
+      <td class="src "><span class="cm">     * @return True if the system error output character stream is set.     </span></td>
     </tr>
 
     <tr class="source-line">
@@ -600,8 +567,8 @@
       <td class="lineno"><a id="l59" href="#l59">59</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="nf">getStackSize</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">bool_t</span><span class="w"> </span><span class="nf">setCerr</span><span class="p">(</span><span class="n">OutStream</span><span class="o">&lt;</span><span class="n">char_t</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">cerr</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -609,15 +576,15 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">{</span><span class="w"></span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l61" href="#l61">61</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">6</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0U</span><span class="p">;</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -625,7 +592,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="src "><span class="cm">     * @brief Resets the system output character stream to default.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -633,7 +600,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -641,7 +608,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">resetCout</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -657,7 +624,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace lib</span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
@@ -665,7 +632,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+      <td class="src "><span class="cm">     * @brief Resets the system error output character stream to default.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -673,11 +640,83 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cp">#endif </span><span class="c1">// LIB_ABSTRACTTASK_HPP_</span></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l69" href="#l69">69</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">resetCerr</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l70" href="#l70">70</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l71" href="#l71">71</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">};</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l72" href="#l72">72</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l73" href="#l73">73</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">394</td>
+      <td class="src coveredLine"><span class="kr">inline</span><span class="w"> </span><span class="n">StreamManager</span><span class="o">::~</span><span class="n">StreamManager</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l74" href="#l74">74</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l75" href="#l75">75</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace api</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l76" href="#l76">76</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l77" href="#l77">77</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cp">#endif </span><span class="c1">// API_STREAMMANAGER_HPP_</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>

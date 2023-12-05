@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2023-03-16 04:37:09</td>
+      <td>2023-12-05 18:56:11</td>
     </tr>
   </table>
 </div>
@@ -47,15 +47,15 @@
     </tr>
     <tr>
       <th scope="row">Functions:</th>
-      <td>2</td>
-      <td>2</td>
+      <td>8</td>
+      <td>8</td>
       <td class="coverage-high">100.0%</td>
     </tr>
     <tr>
       <th scope="row">Branches:</th>
-      <td>1</td>
-      <td>2</td>
-      <td class="coverage-low">50.0%</td>
+      <td>0</td>
+      <td>0</td>
+      <td class="coverage-unknown">-%</td>
     </tr>
   </table>
 </div>
@@ -75,24 +75,90 @@
     </tr>
     <tr>
       <td>
-        <a href="#l29">eoos::sys::NonCopyable::NonCopyable()</a>
+        <a href="#l67">eoos::sys::NonCopyable&lt;eoos::sys::MutexManager&gt;::NonCopyable()</a>
       </td>
       <td>
-        <a href="#l29">29</a>
+        <a href="#l67">67</a>
       </td>
       <td>
-        <a href="#l29"> called 1022 times</a>
+        <a href="#l67"> called 66 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l36">eoos::sys::NonCopyable::~NonCopyable()</a>
+        <a href="#l72">eoos::sys::NonCopyable&lt;eoos::sys::MutexManager&gt;::~NonCopyable()</a>
       </td>
       <td>
-        <a href="#l36">36</a>
+        <a href="#l72">72</a>
       </td>
       <td>
-        <a href="#l36"> called 1021 times</a>
+        <a href="#l72"> called 65 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l67">eoos::sys::NonCopyable&lt;eoos::sys::NoAllocator&gt;::NonCopyable()</a>
+      </td>
+      <td>
+        <a href="#l67">67</a>
+      </td>
+      <td>
+        <a href="#l67"> called 1970 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l72">eoos::sys::NonCopyable&lt;eoos::sys::NoAllocator&gt;::~NonCopyable()</a>
+      </td>
+      <td>
+        <a href="#l72">72</a>
+      </td>
+      <td>
+        <a href="#l72"> called 1970 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l67">eoos::sys::NonCopyable&lt;eoos::sys::Scheduler&gt;::NonCopyable()</a>
+      </td>
+      <td>
+        <a href="#l67">67</a>
+      </td>
+      <td>
+        <a href="#l67"> called 33 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l72">eoos::sys::NonCopyable&lt;eoos::sys::Scheduler&gt;::~NonCopyable()</a>
+      </td>
+      <td>
+        <a href="#l72">72</a>
+      </td>
+      <td>
+        <a href="#l72"> called 33 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l67">eoos::sys::NonCopyable&lt;eoos::sys::SemaphoreManager&gt;::NonCopyable()</a>
+      </td>
+      <td>
+        <a href="#l67">67</a>
+      </td>
+      <td>
+        <a href="#l67"> called 8 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l72">eoos::sys::NonCopyable&lt;eoos::sys::SemaphoreManager&gt;::~NonCopyable()</a>
+      </td>
+      <td>
+        <a href="#l72">72</a>
+      </td>
+      <td>
+        <a href="#l72"> called 8 times</a>
       </td>
     </tr>
   </table>
@@ -139,7 +205,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> * @copyright 2021-2022, Sergey Baigudin, Baigudin Software</span></td>
+      <td class="src "><span class="cm"> * @copyright 2021-2023, Sergey Baigudin, Baigudin Software</span></td>
     </tr>
 
     <tr class="source-line">
@@ -259,7 +325,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm"> */</span><span class="w"></span></td>
+      <td class="src "><span class="cm"> *</span></td>
     </tr>
 
     <tr class="source-line">
@@ -267,7 +333,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">NonCopyable</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Object</span><span class="w"></span></td>
+      <td class="src "><span class="cm"> * @tparam A Heap memory allocator class.</span></td>
     </tr>
 
     <tr class="source-line">
@@ -275,7 +341,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">{</span><span class="w"></span></td>
+      <td class="src "><span class="cm"> */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -283,7 +349,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">Parent</span><span class="p">;</span><span class="w"></span></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -291,7 +357,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="k">class</span><span class="w"> </span><span class="nc">NonCopyable</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -299,7 +365,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -315,7 +381,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
+      <td class="src "><span class="k">public</span><span class="o">:</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -323,7 +389,7 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     * @brief Constructor.</span></td>
+      <td class="src "></td>
     </tr>
 
     <tr class="source-line">
@@ -331,31 +397,31 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l29" href="#l29">29</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1022</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">NonCopyable</span><span class="p">()</span><span class="w"> </span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     * @brief Constructor.</span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l30" href="#l30">30</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1022</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">Object</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="cm">     */</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l31" href="#l31">31</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">1022</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="p">}</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="n">NonCopyable</span><span class="p">();</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -393,16 +459,9 @@
     <tr class="source-line">
       <td class="lineno"><a id="l36" href="#l36">36</a></td>
       <td class="linebranch">
-        <details class="linebranchDetails">
-        <summary class="linebranchSummary">1/2</summary>
-        <div class="linebranchContents">
-          <div class="takenBranch">&check; Branch 1 taken 1021 times.</div>
-          <div class="notTakenBranch">&cross; Branch 2 not taken.</div>
-        </div>
-        </details>
       </td>
-      <td class="linecount coveredLine">2042</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">NonCopyable</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w"></span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">NonCopyable</span><span class="p">();</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
@@ -642,11 +701,91 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace sys</span></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
     </tr>
 
     <tr class="source-line">
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">2184</td>
+      <td class="src coveredLine"><span class="n">NonCopyable</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="n">NonCopyable</span><span class="p">()</span><span class="w"> </span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l68" href="#l68">68</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">2184</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">Object</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l69" href="#l69">69</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">2184</td>
+      <td class="src coveredLine"><span class="p">}</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l70" href="#l70">70</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l71" href="#l71">71</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l72" href="#l72">72</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">4152</td>
+      <td class="src coveredLine"><span class="n">NonCopyable</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::~</span><span class="n">NonCopyable</span><span class="p">()</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l73" href="#l73">73</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">{</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l74" href="#l74">74</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"></span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l75" href="#l75">75</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l76" href="#l76">76</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace sys</span></td>
+    </tr>
+
+    <tr class="source-line">
+      <td class="lineno"><a id="l77" href="#l77">77</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -654,7 +793,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l68" href="#l68">68</a></td>
+      <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
@@ -662,7 +801,7 @@
     </tr>
 
     <tr class="source-line">
-      <td class="lineno"><a id="l69" href="#l69">69</a></td>
+      <td class="lineno"><a id="l79" href="#l79">79</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
