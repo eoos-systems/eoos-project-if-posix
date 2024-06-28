@@ -38,7 +38,6 @@ and requires the next tool to be installed on it:
 
 ###### 1.1.1. Install [Git for Linux and Unix](https://git-scm.com/download/linux)
 
-
 Get Git for Ubuntu following the commands below. For other UNIX OSs following the instruction from the web-site.
 
 ```
@@ -144,6 +143,13 @@ $ gcovr --version
 gcovr 5.2
 ```
 
+Add path to GCOVR to the *$PATH* environment variable
+
+```
+$ echo '' >> $HOME/.bashrc
+$ echo '# GCOVR variable' >> $HOME/.bashrc
+$ echo 'export PATH=$HOME/.local/bin:$PATH' >> $HOME/.bashrc
+```
 
 #### 1.2. Obtain Git Repository
 
