@@ -16,7 +16,7 @@ EOOS Automotive POSIX is developed within **ISO C++ standards**, complied with *
 Quality of EOOS Automotive POSIX:
 
 - MISRA C++: **0** violations
-- Unit Tests coverage: **99%**
+- Unit Tests coverage: **99.9%**
 
 ---
 
