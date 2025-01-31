@@ -16,7 +16,7 @@ EOOS Safe POSIX is developed within **ISO C++ standards**, complied with **MISRA
 Quality of EOOS Safe POSIX:
 
 - MISRA C++: **0** violations
-- Unit Tests coverage: **99.9%**
+- Unit Tests coverage: **99%**
 
 ---
 

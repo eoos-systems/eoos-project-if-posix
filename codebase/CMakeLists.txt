@@ -1,11 +1,11 @@
 # EOOS.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2019-2023, Sergey Baigudin, Baigudin Software
+# @copyright 2019-2025, Sergey Baigudin, Baigudin Software
 
 add_library(target-eoos STATIC
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Call.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Heap.cpp"    
+    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Heap.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Main.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.MutexManager.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.OutStream.cpp"
@@ -35,7 +35,7 @@ target_compile_definitions(target-eoos
 PUBLIC
     "EOOS_GLOBAL_SYS_NUMBER_OF_MUTEXS=${EOOS_GLOBAL_SYS_NUMBER_OF_MUTEXS}"
     "EOOS_GLOBAL_SYS_NUMBER_OF_SEMAPHORES=${EOOS_GLOBAL_SYS_NUMBER_OF_SEMAPHORES}"
-    "EOOS_GLOBAL_SYS_NUMBER_OF_THREADS=${EOOS_GLOBAL_SYS_NUMBER_OF_THREADS}"    
+    "EOOS_GLOBAL_SYS_NUMBER_OF_THREADS=${EOOS_GLOBAL_SYS_NUMBER_OF_THREADS}"
 )
 
 if(EOOS_CMAKE_ENABLE_TESTS)
