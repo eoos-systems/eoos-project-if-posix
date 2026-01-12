@@ -1,6 +1,10 @@
 # EOOS Safe POSIX
 ---
 
+✔ **[ПОДДЕРЖАТЬ ПРОЕКТ](https://yoomoney.ru/fundraise/1F8GU3P5MIJ.260112)**
+
+---
+
 **EOOS copyrights reserved in [Rospatent Federal Service for Intellectual Property]( https://www1.fips.ru/registers-doc-view/fips_servlet?DB=EVM&DocNumber=2017664105&TypeFile=html), Russian Federation**
 
 EOOS Safe for POSIX based operating systems is a **C++ library for cross-platform development** of
