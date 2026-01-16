@@ -1,12 +1,11 @@
 # EOOS.
 #
 # @author    Sergey Baigudin, sergey@baigudin.software
-# @copyright 2019-2025, Sergey Baigudin, Baigudin Software
+# @copyright 2019-2026, Sergey Baigudin, Baigudin Software
 
 add_library(target-eoos STATIC
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Call.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Heap.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Main.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.MutexManager.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.OutStream.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/system/source/sys.Scheduler.cpp"
@@ -33,16 +32,12 @@ endif()
 
 target_compile_definitions(target-eoos
 PUBLIC
-    "EOOS_GLOBAL_SYS_NUMBER_OF_MUTEXS=${EOOS_GLOBAL_SYS_NUMBER_OF_MUTEXS}"
-    "EOOS_GLOBAL_SYS_NUMBER_OF_SEMAPHORES=${EOOS_GLOBAL_SYS_NUMBER_OF_SEMAPHORES}"
-    "EOOS_GLOBAL_SYS_NUMBER_OF_THREADS=${EOOS_GLOBAL_SYS_NUMBER_OF_THREADS}"
+    "EOOS_GLOBAL_SYS_MUTEX_AMOUNT=${EOOS_GLOBAL_SYS_MUTEX_AMOUNT}"
+    "EOOS_GLOBAL_SYS_SEMAPHORE_AMOUNT=${EOOS_GLOBAL_SYS_SEMAPHORE_AMOUNT}"
+    "EOOS_GLOBAL_SYS_THREAD_AMOUNT=${EOOS_GLOBAL_SYS_THREAD_AMOUNT}"
 )
 
 if(EOOS_CMAKE_ENABLE_TESTS)
-    target_include_directories(target-eoos
-    PUBLIC
-        "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/system/include/private>"
-    )
     add_subdirectory(tests)
 endif()
 
