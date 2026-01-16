@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2025-03-03 02:01:45</td>
+      <td>2026-01-16 23:55:01</td>
     </tr>
   </table>
 </div>
@@ -75,90 +75,90 @@
     </tr>
     <tr>
       <td>
-        <a href="#l65">eoos::lib::Guard&lt;eoos::NullAllocator&gt;::Guard(eoos::api::Guard&amp;)</a>
+        <a href="#l70">eoos::lib::Guard&lt;eoos::NullAllocator&gt;::Guard(eoos::api::Guard&amp;)</a>
       </td>
       <td>
-        <a href="#l65">65</a>
+        <a href="#l70">70</a>
       </td>
       <td>
-        <a href="#l65"> not called</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l73">eoos::lib::Guard&lt;eoos::NullAllocator&gt;::~Guard()</a>
-      </td>
-      <td>
-        <a href="#l73">73</a>
-      </td>
-      <td>
-        <a href="#l73"> not called</a>
+        <a href="#l70"> not called</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l65">eoos::lib::Guard&lt;eoos::lib::Allocator&gt;::Guard(eoos::api::Guard&amp;)</a>
+        <a href="#l79">eoos::lib::Guard&lt;eoos::NullAllocator&gt;::~Guard()</a>
       </td>
       <td>
-        <a href="#l65">65</a>
+        <a href="#l79">79</a>
       </td>
       <td>
-        <a href="#l65"> called 85 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l82">eoos::lib::Guard&lt;eoos::lib::Allocator&gt;::construct()</a>
-      </td>
-      <td>
-        <a href="#l82">82</a>
-      </td>
-      <td>
-        <a href="#l82"> called 85 times</a>
+        <a href="#l79"> not called</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l73">eoos::lib::Guard&lt;eoos::lib::Allocator&gt;::~Guard()</a>
+        <a href="#l70">eoos::lib::Guard&lt;eoos::lib::Allocator&gt;::Guard(eoos::api::Guard&amp;)</a>
       </td>
       <td>
-        <a href="#l73">73</a>
+        <a href="#l70">70</a>
       </td>
       <td>
-        <a href="#l73"> called 85 times</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#l65">eoos::lib::Guard&lt;eoos::lib::NoAllocator&gt;::Guard(eoos::api::Guard&amp;)</a>
-      </td>
-      <td>
-        <a href="#l65">65</a>
-      </td>
-      <td>
-        <a href="#l65"> called 87 times</a>
+        <a href="#l70"> called 99 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l82">eoos::lib::Guard&lt;eoos::lib::NoAllocator&gt;::construct()</a>
+        <a href="#l88">eoos::lib::Guard&lt;eoos::lib::Allocator&gt;::construct()</a>
       </td>
       <td>
-        <a href="#l82">82</a>
+        <a href="#l88">88</a>
       </td>
       <td>
-        <a href="#l82"> called 87 times</a>
+        <a href="#l88"> called 99 times</a>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="#l73">eoos::lib::Guard&lt;eoos::lib::NoAllocator&gt;::~Guard()</a>
+        <a href="#l79">eoos::lib::Guard&lt;eoos::lib::Allocator&gt;::~Guard()</a>
       </td>
       <td>
-        <a href="#l73">73</a>
+        <a href="#l79">79</a>
       </td>
       <td>
-        <a href="#l73"> called 87 times</a>
+        <a href="#l79"> called 99 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l70">eoos::lib::Guard&lt;eoos::lib::NoAllocator&gt;::Guard(eoos::api::Guard&amp;)</a>
+      </td>
+      <td>
+        <a href="#l70">70</a>
+      </td>
+      <td>
+        <a href="#l70"> called 73 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l88">eoos::lib::Guard&lt;eoos::lib::NoAllocator&gt;::construct()</a>
+      </td>
+      <td>
+        <a href="#l88">88</a>
+      </td>
+      <td>
+        <a href="#l88"> called 73 times</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#l79">eoos::lib::Guard&lt;eoos::lib::NoAllocator&gt;::~Guard()</a>
+      </td>
+      <td>
+        <a href="#l79">79</a>
+      </td>
+      <td>
+        <a href="#l79"> called 73 times</a>
       </td>
     </tr>
   </table>
@@ -607,45 +607,87 @@
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">};</span></td>
+      <td class="src "><span class="w">    </span><span class="cm">/**</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l63" href="#l63">63</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "></td>
+      <td class="src "><span class="cm">     * @brief Guard resource identifier.</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l64" href="#l64">64</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span></td>
+      <td class="src "><span class="cm">     */</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l65" href="#l65">65</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">172</td>
-      <td class="src coveredLine"><span class="n">Guard</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="n">Guard</span><span class="p">(</span><span class="n">api</span><span class="o">::</span><span class="n">Guard</span><span class="o">&amp;</span><span class="w"> </span><span class="n">guard</span><span class="p">)</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="n">bool_t</span><span class="w"> </span><span class="n">isLocked_</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l66" href="#l66">66</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">NonCopyable</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">()</span></td>
+      <td class="src "></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l67" href="#l67">67</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">172</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">guard_</span><span class="p">(</span><span class="w"> </span><span class="n">guard</span><span class="w"> </span><span class="p">){</span></td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">};</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l68" href="#l68">68</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l69" href="#l69">69</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l70" href="#l70">70</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">172</td>
+      <td class="src coveredLine"><span class="n">Guard</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="n">Guard</span><span class="p">(</span><span class="n">api</span><span class="o">::</span><span class="n">Guard</span><span class="o">&amp;</span><span class="w"> </span><span class="n">guard</span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l71" href="#l71">71</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">NonCopyable</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">()</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l72" href="#l72">72</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">172</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">guard_</span><span class="p">(</span><span class="w"> </span><span class="n">guard</span><span class="w"> </span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l73" href="#l73">73</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">172</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">isLocked_</span><span class="p">(</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="p">){</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l74" href="#l74">74</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
@@ -659,49 +701,77 @@
       <td class="src coveredLine"><span class="w">    </span><span class="n">bool_t</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">isConstructed</span><span class="p">(</span><span class="w"> </span><span class="n">construct</span><span class="p">()</span><span class="w"> </span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l69" href="#l69">69</a></td>
+      <td class="lineno"><a id="l75" href="#l75">75</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">172</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">setConstructed</span><span class="p">(</span><span class="w"> </span><span class="n">isConstructed</span><span class="w"> </span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l70" href="#l70">70</a></td>
+      <td class="lineno"><a id="l76" href="#l76">76</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">172</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l71" href="#l71">71</a></td>
+      <td class="lineno"><a id="l77" href="#l77">77</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l72" href="#l72">72</a></td>
+      <td class="lineno"><a id="l78" href="#l78">78</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l73" href="#l73">73</a></td>
+      <td class="lineno"><a id="l79" href="#l79">79</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">344</td>
       <td class="src coveredLine"><span class="n">Guard</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::~</span><span class="n">Guard</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l74" href="#l74">74</a></td>
+      <td class="lineno"><a id="l80" href="#l80">80</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l75" href="#l75">75</a></td>
+      <td class="lineno"><a id="l81" href="#l81">81</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">344</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">isLocked_</span><span class="w"> </span><span class="p">)</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l82" href="#l82">82</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="p">{</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l83" href="#l83">83</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">314</td>
+      <td class="src coveredLine"><span class="w">        </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">guard_</span><span class="p">.</span><span class="n">unlock</span><span class="p">()</span><span class="w"> </span><span class="p">);</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l84" href="#l84">84</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="w">    </span><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l85" href="#l85">85</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">2/2</summary>
@@ -711,74 +781,39 @@
         </div>
         </details>
       </td>
-      <td class="linecount coveredLine">344</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">isConstructed</span><span class="p">()</span><span class="w"> </span><span class="p">)</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l76" href="#l76">76</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">{</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l77" href="#l77">77</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">314</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">guard_</span><span class="p">.</span><span class="n">unlock</span><span class="p">()</span><span class="w"> </span><span class="p">);</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l78" href="#l78">78</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l79" href="#l79">79</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">688</td>
+      <td class="linecount coveredLine">658</td>
       <td class="src coveredLine"><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l80" href="#l80">80</a></td>
+      <td class="lineno"><a id="l86" href="#l86">86</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l81" href="#l81">81</a></td>
+      <td class="lineno"><a id="l87" href="#l87">87</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="o">&gt;</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l82" href="#l82">82</a></td>
+      <td class="lineno"><a id="l88" href="#l88">88</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount coveredLine">172</td>
       <td class="src coveredLine"><span class="n">bool_t</span><span class="w"> </span><span class="n">Guard</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;::</span><span class="n">construct</span><span class="p">()</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l83" href="#l83">83</a></td>
+      <td class="lineno"><a id="l89" href="#l89">89</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l84" href="#l84">84</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">172</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="n">bool_t</span><span class="w"> </span><span class="nf">res</span><span class="p">(</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="p">);</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l85" href="#l85">85</a></td>
+      <td class="lineno"><a id="l90" href="#l90">90</a></td>
       <td class="linebranch">
         <details class="linebranchDetails">
         <summary class="linebranchSummary">1/2</summary>
@@ -792,70 +827,70 @@
       <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">isConstructed</span><span class="p">()</span><span class="w"> </span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l86" href="#l86">86</a></td>
+      <td class="lineno"><a id="l91" href="#l91">91</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="w">    </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l87" href="#l87">87</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">172</td>
-      <td class="src coveredLine"><span class="w">        </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">guard_</span><span class="p">.</span><span class="n">lock</span><span class="p">();</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l88" href="#l88">88</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="w">    </span><span class="p">}</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l89" href="#l89">89</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount coveredLine">172</td>
-      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l90" href="#l90">90</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span></td>
-    </tr>
-    <tr class="source-line">
-      <td class="lineno"><a id="l91" href="#l91">91</a></td>
-      <td class="linebranch">
-      </td>
-      <td class="linecount "></td>
-      <td class="src "></td>
-    </tr>
-    <tr class="source-line">
       <td class="lineno"><a id="l92" href="#l92">92</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace lib</span></td>
+      <td class="linecount coveredLine">172</td>
+      <td class="src coveredLine"><span class="w">        </span><span class="n">isLocked_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">guard_</span><span class="p">.</span><span class="n">lock</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l93" href="#l93">93</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
-      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+      <td class="src "><span class="w">    </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l94" href="#l94">94</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount coveredLine">172</td>
+      <td class="src coveredLine"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">isLocked_</span><span class="p">;</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l95" href="#l95">95</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l96" href="#l96">96</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l97" href="#l97">97</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace lib</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l98" href="#l98">98</a></td>
+      <td class="linebranch">
+      </td>
+      <td class="linecount "></td>
+      <td class="src "><span class="p">}</span><span class="w"> </span><span class="c1">// namespace eoos</span></td>
+    </tr>
+    <tr class="source-line">
+      <td class="lineno"><a id="l99" href="#l99">99</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
       <td class="src "><span class="cp">#endif </span><span class="c1">// LIB_GUARD_HPP_</span></td>
     </tr>
     <tr class="source-line">
-      <td class="lineno"><a id="l95" href="#l95">95</a></td>
+      <td class="lineno"><a id="l100" href="#l100">100</a></td>
       <td class="linebranch">
       </td>
       <td class="linecount "></td>
